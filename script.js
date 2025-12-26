@@ -279,3 +279,250 @@ window.addEventListener('resize', () => {
         console.log('Window resized');
     }, 250);
 });
+// =======================================
+// Background Slideshow
+// =======================================
+function initBackgroundSlideshow() {
+    const slides = document.querySelectorAll('.bg-slideshow .slide');
+    let currentSlide = 0;
+    
+    function showNextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+    
+    // Change slide every 6 seconds
+    setInterval(showNextSlide, 6000);
+}
+
+// =======================================
+// Featured Projects Carousel
+// =======================================
+function initFeaturedCarousel() {
+    const carouselTrack = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.featured-project-slide');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const dots = document.querySelectorAll('.carousel-dots .dot');
+    
+    if (!carouselTrack || slides.length === 0) return;
+    
+    let currentIndex = 0;
+    const slideWidth = slides[0].offsetWidth;
+    
+    function updateCarousel() {
+        carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // Update active dot
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+    
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    }
+    
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+    }
+    
+    // Button listeners
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+    
+    // Dot listeners
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+        });
+    });
+    
+    // Auto-advance (optional)
+    setInterval(nextSlide, 8000);
+    
+    // Update on window resize
+    window.addEventListener('resize', () => {
+        updateCarousel();
+    });
+}
+
+// =======================================
+// Notes Filtering System
+// =======================================
+function initNotesFilter() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const noteCards = document.querySelectorAll('.note-card');
+    
+    if (!filterButtons.length) return;
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filterValue = button.getAttribute('data-filter');
+            
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            // Filter cards
+            noteCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                
+                if (filterValue === 'all' || category === filterValue) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+}
+
+// =======================================
+// Note Modal System
+// =======================================
+function initNoteModal() {
+    const modal = document.getElementById('noteModal');
+    const modalBody = document.getElementById('modalBody');
+    const modalClose = document.querySelector('.modal-close');
+    const viewNoteBtns = document.querySelectorAll('.view-note-btn');
+    
+    if (!modal) return;
+    
+    // Open modal
+    viewNoteBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const noteCard = btn.closest('.note-card');
+            const noteTitle = noteCard.querySelector('h3').textContent;
+            const noteContent = noteCard.getAttribute('data-content') || `
+                <h2>${noteTitle}</h2>
+                <h3>Introduction</h3>
+                <p>This is a placeholder for your embedded note content. You can add full articles, tutorials, or detailed notes here.</p>
+                
+                <h3>Key Points</h3>
+                <p>• Point 1: Detailed explanation</p>
+                <p>• Point 2: More information</p>
+                <p>• Point 3: Additional insights</p>
+                
+                <h3>Code Example</h3>
+                <pre><code>
+import torch
+import torch.nn as nn
+
+# Example neural network
+class MyModel(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.layer = nn.Linear(10, 5)
+    
+    def forward(self, x):
+        return self.layer(x)
+                </code></pre>
+                
+                <h3>Conclusion</h3>
+                <p>Summary of the key learnings and takeaways from this note.</p>
+            `;
+            
+            modalBody.innerHTML = noteContent;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Close modal
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+    }
+    
+    // Close on background click
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Close on ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+}
+
+// =======================================
+// Load More Projects
+// =======================================
+function initLoadMore() {
+    const loadMoreBtn = document.getElementById('loadMoreProjects');
+    
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', () => {
+            // Add your logic to load more projects dynamically
+            // This is a placeholder - you can fetch from API or load hidden elements
+            alert('Load more functionality - Add your projects data source here!');
+        });
+    }
+}
+
+// =======================================
+// Add New Note Button
+// =======================================
+function initAddNote() {
+    const addNoteBtn = document.getElementById('addNoteBtn');
+    
+    if (addNoteBtn) {
+        addNoteBtn.addEventListener('click', () => {
+            // You can open a form or redirect to an admin panel
+            alert('Add note functionality - Connect to your content management system!');
+        });
+    }
+}
+
+// =======================================
+// Initialize All Functions on Load
+// =======================================
+document.addEventListener('DOMContentLoaded', () => {
+    // Existing functions
+    type();
+    setupSmoothScrolling();
+    setupMobileNav();
+    setupNavbarScroll();
+    setupIntersectionObserver();
+    setupSkillBars();
+    setupProjectFilters();
+    setupFormValidation();
+    
+    // New functions
+    initBackgroundSlideshow();
+    initFeaturedCarousel();
+    initNotesFilter();
+    initNoteModal();
+    initLoadMore();
+    initAddNote();
+});
+
+// Handle page visibility for animations
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        // Pause animations when tab is not visible
+    } else {
+        // Resume animations
+    }
+});
