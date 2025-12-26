@@ -897,15 +897,11 @@ function initAddNote() {
 // Initialize All Functions on Load
 // =======================================
 document.addEventListener('DOMContentLoaded', () => {
-    // Existing functions
+    // Existing functions that are defined
     type();
     setupSmoothScrolling();
     setupMobileNav();
     setupNavbarScroll();
-    setupIntersectionObserver();
-    setupSkillBars();
-    setupProjectFilters();
-    setupFormValidation();
     
     // New functions
     initBackgroundSlideshow();
@@ -914,6 +910,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initNoteModal();
     initLoadMore();
     initAddNote();
+    
+    console.log('✅ All portfolio features initialized successfully!');
 });
 
 // Handle page visibility for animations
