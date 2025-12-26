@@ -12,8 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Animated Background -->
+    <!-- Animated Background with Image Slideshow -->
     <div class="animated-bg">
+        <div class="bg-slideshow">
+            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1920&q=80');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1920&q=80');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1920&q=80');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80');"></div>
+        </div>
         <div class="gradient-circle circle-1"></div>
         <div class="gradient-circle circle-2"></div>
         <div class="gradient-circle circle-3"></div>
@@ -36,7 +43,9 @@
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#featured-projects" class="nav-link">Featured</a></li>
+                <li><a href="#completed-projects" class="nav-link">Completed</a></li>
+                <li><a href="#notes" class="nav-link">Notes</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
@@ -58,7 +67,7 @@
                     Building intelligent solutions through data-driven insights and cutting-edge AI technologies.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">
+                    <a href="#featured-projects" class="btn btn-primary">
                         <i class="fas fa-briefcase"></i> View My Work
                     </a>
                     <a href="#contact" class="btn btn-secondary">
@@ -180,149 +189,466 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
+    <!-- Featured Projects Section (Currently Working On) -->
+    <section id="featured-projects" class="featured-projects-section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Featured Projects</h2>
                 <div class="title-underline"></div>
-                <p class="section-subtitle">Here are some of my recent works</p>
+                <p class="section-subtitle">Currently working on these exciting projects</p>
             </div>
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <i class="fas fa-brain project-icon"></i>
+            
+            <!-- Project Carousel -->
+            <div class="featured-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <!-- Project 1 -->
+                        <div class="featured-project-slide active">
+                            <div class="featured-project-card">
+                                <div class="featured-project-image">
+                                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop" alt="LLM Project">
+                                    <div class="project-status">
+                                        <span class="status-badge working"><i class="fas fa-spinner fa-spin"></i> In Progress</span>
+                                    </div>
+                                </div>
+                                <div class="featured-project-content">
+                                    <h3>Advanced LLM Fine-Tuning Framework</h3>
+                                    <p>Developing a comprehensive framework for fine-tuning large language models with efficient parameter optimization and domain adaptation techniques.</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Transformers</span>
+                                        <span class="tech-tag">PyTorch</span>
+                                        <span class="tech-tag">PEFT</span>
+                                    </div>
+                                    <div class="project-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 65%"></div>
+                                        </div>
+                                        <span class="progress-text">65% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>LLM Fine-Tuning Project</h3>
-                        <p>Fine-tuning large language models for specific domain tasks using transfer learning techniques and optimized training strategies.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Transformers</span>
-                            <span class="tech-tag">PyTorch</span>
+
+                        <!-- Project 2 -->
+                        <div class="featured-project-slide">
+                            <div class="featured-project-card">
+                                <div class="featured-project-image">
+                                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop" alt="RAG System">
+                                    <div class="project-status">
+                                        <span class="status-badge working"><i class="fas fa-spinner fa-spin"></i> In Progress</span>
+                                    </div>
+                                </div>
+                                <div class="featured-project-content">
+                                    <h3>RAG-Based Knowledge Assistant</h3>
+                                    <p>Building an intelligent knowledge retrieval system using Retrieval-Augmented Generation with vector databases for enhanced contextual responses.</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">LangChain</span>
+                                        <span class="tech-tag">ChromaDB</span>
+                                        <span class="tech-tag">OpenAI</span>
+                                    </div>
+                                    <div class="project-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 45%"></div>
+                                        </div>
+                                        <span class="progress-text">45% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Labib1610" class="project-link">
-                                <i class="fab fa-github"></i> View on GitHub
-                            </a>
+
+                        <!-- Project 3 -->
+                        <div class="featured-project-slide">
+                            <div class="featured-project-card">
+                                <div class="featured-project-image">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="Data Pipeline">
+                                    <div class="project-status">
+                                        <span class="status-badge working"><i class="fas fa-spinner fa-spin"></i> In Progress</span>
+                                    </div>
+                                </div>
+                                <div class="featured-project-content">
+                                    <h3>Real-Time Data Analytics Pipeline</h3>
+                                    <p>Creating a scalable ETL pipeline for processing and analyzing large-scale datasets with real-time monitoring and automated reporting.</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Apache Spark</span>
+                                        <span class="tech-tag">Kafka</span>
+                                        <span class="tech-tag">PostgreSQL</span>
+                                    </div>
+                                    <div class="project-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 80%"></div>
+                                        </div>
+                                        <span class="progress-text">80% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <i class="fas fa-comments project-icon"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Sentiment Analysis with NLP</h3>
-                        <p>Building a sentiment analysis model using natural language processing to classify text emotions and opinions from social media data.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">NLTK</span>
-                            <span class="tech-tag">Scikit-learn</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Labib1610" class="project-link">
-                                <i class="fab fa-github"></i> View on GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <i class="fas fa-chart-line project-icon"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Predictive Analytics Model</h3>
-                        <p>Machine learning model for predictive analytics using regression and classification algorithms to forecast trends and patterns.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Pandas</span>
-                            <span class="tech-tag">TensorFlow</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Labib1610" class="project-link">
-                                <i class="fab fa-github"></i> View on GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <i class="fas fa-robot project-icon"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>AI Chatbot with RAG</h3>
-                        <p>Intelligent chatbot leveraging Retrieval-Augmented Generation (RAG) for context-aware responses using vector databases and LLMs.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">LangChain</span>
-                            <span class="tech-tag">OpenAI</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Labib1610" class="project-link">
-                                <i class="fab fa-github"></i> View on GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <i class="fas fa-image project-icon"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Computer Vision Application</h3>
-                        <p>Deep learning model for image classification and object detection using convolutional neural networks and transfer learning.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">PyTorch</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Labib1610" class="project-link">
-                                <i class="fab fa-github"></i> View on GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <i class="fas fa-database project-icon"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Data Pipeline & ETL</h3>
-                        <p>Automated data pipeline for extracting, transforming, and loading large datasets with data quality checks and monitoring.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">Apache Airflow</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Labib1610" class="project-link">
-                                <i class="fab fa-github"></i> View on GitHub
-                            </a>
-                        </div>
-                    </div>
+                
+                <!-- Carousel Controls -->
+                <button class="carousel-btn prev-btn" id="prevFeatured">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next-btn" id="nextFeatured">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- Carousel Dots -->
+                <div class="carousel-dots" id="featuredDots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Completed Projects Section -->
+    <section id="completed-projects" class="completed-projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Completed Projects</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Successfully completed research and development projects</p>
+            </div>
+            
+            <div class="completed-projects-grid">
+                <!-- Project 1 -->
+                <div class="completed-project-card">
+                    <div class="project-header">
+                        <div class="project-icon-wrapper">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <span class="completion-badge"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                    <h3>Sentiment Analysis for Social Media</h3>
+                    <p>Built a robust sentiment analysis system for analyzing Twitter data with 92% accuracy using transformer models.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">BERT</span>
+                        <span class="tech-tag">NLTK</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Labib1610" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-file-pdf"></i> Paper
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="completed-project-card">
+                    <div class="project-header">
+                        <div class="project-icon-wrapper">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <span class="completion-badge"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                    <h3>Image Classification with CNNs</h3>
+                    <p>Developed a deep learning model for multi-class image classification achieving 95% accuracy on test dataset.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">ResNet</span>
+                        <span class="tech-tag">OpenCV</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Labib1610" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-file-pdf"></i> Paper
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-chart-bar"></i> Results
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="completed-project-card">
+                    <div class="project-header">
+                        <div class="project-icon-wrapper">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span class="completion-badge"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                    <h3>Predictive Analytics Dashboard</h3>
+                    <p>Created an interactive dashboard for business forecasting using time series analysis and regression models.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">Prophet</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Labib1610" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-book"></i> Docs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="completed-project-card">
+                    <div class="project-header">
+                        <div class="project-icon-wrapper">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <span class="completion-badge"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                    <h3>Customer Segmentation Analysis</h3>
+                    <p>Performed clustering analysis to segment customers using K-means and hierarchical clustering techniques.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Pandas</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Labib1610" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-file-pdf"></i> Report
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-code"></i> Notebook
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="completed-project-card">
+                    <div class="project-header">
+                        <div class="project-icon-wrapper">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <span class="completion-badge"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                    <h3>Text Generation with GPT</h3>
+                    <p>Fine-tuned GPT model for creative text generation with specific writing styles and domain knowledge.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Transformers</span>
+                        <span class="tech-tag">Hugging Face</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Labib1610" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-play-circle"></i> Try It
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-file-alt"></i> Blog Post
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="completed-project-card">
+                    <div class="project-header">
+                        <div class="project-icon-wrapper">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <span class="completion-badge"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
+                    <h3>Recommendation System</h3>
+                    <p>Implemented a collaborative filtering recommendation system with content-based and hybrid approaches.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Surprise</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Labib1610" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-file-pdf"></i> Paper
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-chart-pie"></i> Analysis
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="btn btn-primary load-more-btn" id="loadMoreProjects">
+                    <i class="fas fa-plus-circle"></i> Load More Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Notes Section -->
+    <section id="notes" class="notes-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Research Notes & Documentation</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">My learning journey and technical documentation</p>
+            </div>
+
+            <!-- Notes Categories -->
+            <div class="notes-filter">
+                <button class="filter-btn active" data-category="all">All Notes</button>
+                <button class="filter-btn" data-category="machine-learning">Machine Learning</button>
+                <button class="filter-btn" data-category="deep-learning">Deep Learning</button>
+                <button class="filter-btn" data-category="nlp">NLP</button>
+                <button class="filter-btn" data-category="tutorials">Tutorials</button>
+            </div>
+
+            <!-- Notes Grid -->
+            <div class="notes-grid">
+                <!-- Note 1 - External Link (Google Drive) -->
+                <div class="note-card" data-category="machine-learning">
+                    <div class="note-header">
+                        <div class="note-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <span class="note-type"><i class="fas fa-external-link-alt"></i> External</span>
+                    </div>
+                    <h3>Introduction to Machine Learning</h3>
+                    <p>Comprehensive notes covering supervised and unsupervised learning algorithms, model evaluation, and best practices.</p>
+                    <div class="note-meta">
+                        <span><i class="far fa-calendar"></i> Dec 15, 2025</span>
+                        <span><i class="fas fa-file-pdf"></i> PDF</span>
+                    </div>
+                    <a href="#" class="note-link" target="_blank">
+                        <i class="fab fa-google-drive"></i> View on Google Drive
+                    </a>
+                </div>
+
+                <!-- Note 2 - Embedded Content -->
+                <div class="note-card" data-category="deep-learning">
+                    <div class="note-header">
+                        <div class="note-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <span class="note-type"><i class="fas fa-file-alt"></i> Embedded</span>
+                    </div>
+                    <h3>Neural Networks Fundamentals</h3>
+                    <p>Deep dive into neural network architectures, backpropagation, optimization techniques, and activation functions.</p>
+                    <div class="note-meta">
+                        <span><i class="far fa-calendar"></i> Dec 18, 2025</span>
+                        <span><i class="fas fa-book"></i> Article</span>
+                    </div>
+                    <button class="note-link view-note-btn" data-note-id="note-1">
+                        <i class="fas fa-eye"></i> Read Here
+                    </button>
+                </div>
+
+                <!-- Note 3 - External Link -->
+                <div class="note-card" data-category="nlp">
+                    <div class="note-header">
+                        <div class="note-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <span class="note-type"><i class="fas fa-external-link-alt"></i> External</span>
+                    </div>
+                    <h3>Transformer Architecture Explained</h3>
+                    <p>Detailed analysis of transformer models, attention mechanisms, and their applications in NLP tasks.</p>
+                    <div class="note-meta">
+                        <span><i class="far fa-calendar"></i> Dec 20, 2025</span>
+                        <span><i class="fas fa-file-pdf"></i> PDF</span>
+                    </div>
+                    <a href="#" class="note-link" target="_blank">
+                        <i class="fab fa-google-drive"></i> View on Google Drive
+                    </a>
+                </div>
+
+                <!-- Note 4 - Embedded -->
+                <div class="note-card" data-category="tutorials">
+                    <div class="note-header">
+                        <div class="note-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <span class="note-type"><i class="fas fa-file-alt"></i> Embedded</span>
+                    </div>
+                    <h3>PyTorch Tutorial Series</h3>
+                    <p>Step-by-step guide to building deep learning models with PyTorch, including practical examples and code snippets.</p>
+                    <div class="note-meta">
+                        <span><i class="far fa-calendar"></i> Dec 22, 2025</span>
+                        <span><i class="fas fa-laptop-code"></i> Tutorial</span>
+                    </div>
+                    <button class="note-link view-note-btn" data-note-id="note-2">
+                        <i class="fas fa-eye"></i> Read Here
+                    </button>
+                </div>
+
+                <!-- Note 5 - External -->
+                <div class="note-card" data-category="machine-learning">
+                    <div class="note-header">
+                        <div class="note-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <span class="note-type"><i class="fas fa-external-link-alt"></i> External</span>
+                    </div>
+                    <h3>Feature Engineering Techniques</h3>
+                    <p>Collection of feature engineering methods, dimensionality reduction, and data preprocessing strategies.</p>
+                    <div class="note-meta">
+                        <span><i class="far fa-calendar"></i> Dec 10, 2025</span>
+                        <span><i class="fas fa-file-pdf"></i> PDF</span>
+                    </div>
+                    <a href="#" class="note-link" target="_blank">
+                        <i class="fab fa-google-drive"></i> View on Google Drive
+                    </a>
+                </div>
+
+                <!-- Note 6 - Embedded -->
+                <div class="note-card" data-category="deep-learning">
+                    <div class="note-header">
+                        <div class="note-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <span class="note-type"><i class="fas fa-file-alt"></i> Embedded</span>
+                    </div>
+                    <h3>CNN Architectures Comparison</h3>
+                    <p>Comparative study of popular CNN architectures like ResNet, VGG, Inception, and their performance metrics.</p>
+                    <div class="note-meta">
+                        <span><i class="far fa-calendar"></i> Dec 24, 2025</span>
+                        <span><i class="fas fa-chart-line"></i> Analysis</span>
+                    </div>
+                    <button class="note-link view-note-btn" data-note-id="note-3">
+                        <i class="fas fa-eye"></i> Read Here
+                    </button>
+                </div>
+            </div>
+
+            <!-- Add New Note Button -->
+            <div class="add-note-container">
+                <button class="btn btn-secondary" id="addNoteBtn">
+                    <i class="fas fa-plus"></i> Add New Note
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Note Modal (for embedded notes) -->
+    <div class="note-modal" id="noteModal">
+        <div class="note-modal-content">
+            <button class="modal-close" id="closeNoteModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="note-modal-body" id="noteModalBody">
+                <!-- Note content will be loaded here -->
+            </div>
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
