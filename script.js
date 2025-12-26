@@ -924,3 +924,4 @@ document.addEventListener('visibilitychange', () => {
         // Resume animations
     }
 });
+console.log('Portfolio JS Loaded - Version: 1766778724');
