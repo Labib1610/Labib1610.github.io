@@ -302,8 +302,8 @@ function initBackgroundSlideshow() {
 function initFeaturedCarousel() {
     const carouselTrack = document.querySelector('.carousel-track');
     const slides = document.querySelectorAll('.featured-project-slide');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
+    const prevBtn = document.getElementById('prevFeatured');
+    const nextBtn = document.getElementById('nextFeatured');
     const dots = document.querySelectorAll('.carousel-dots .dot');
     
     if (!carouselTrack || slides.length === 0) return;
@@ -337,7 +337,8 @@ function initFeaturedCarousel() {
     // Dot listeners
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
-            currentIndex = index;
+            const slideIndex = parseInt(dot.getAttribute('data-slide'));
+            currentIndex = slideIndex;
             updateCarousel();
         });
     });
@@ -362,7 +363,7 @@ function initNotesFilter() {
     
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const filterValue = button.getAttribute('data-filter');
+            const filterValue = button.getAttribute('data-category');
             
             // Update active button
             filterButtons.forEach(btn => btn.classList.remove('active'));
@@ -395,18 +396,326 @@ function initNotesFilter() {
 // =======================================
 function initNoteModal() {
     const modal = document.getElementById('noteModal');
-    const modalBody = document.getElementById('modalBody');
-    const modalClose = document.querySelector('.modal-close');
+    const modalBody = document.getElementById('noteModalBody');
+    const modalClose = document.getElementById('closeNoteModal');
     const viewNoteBtns = document.querySelectorAll('.view-note-btn');
     
     if (!modal) return;
     
+    // Predefined note contents
+    const noteContents = {
+        'note-1': `
+            <h2>Neural Networks Fundamentals</h2>
+            <h3>Introduction to Neural Networks</h3>
+            <p>Neural networks are computing systems inspired by biological neural networks. They consist of interconnected nodes (neurons) organized in layers that process information through weighted connections.</p>
+            
+            <h3>Key Components</h3>
+            <p><strong>Input Layer:</strong> Receives raw data features</p>
+            <p><strong>Hidden Layers:</strong> Process and transform data through activation functions</p>
+            <p><strong>Output Layer:</strong> Produces final predictions or classifications</p>
+            
+            <h3>Activation Functions</h3>
+            <p>Common activation functions include:</p>
+            <ul>
+                <li><strong>ReLU:</strong> max(0, x) - Most popular for hidden layers</li>
+                <li><strong>Sigmoid:</strong> 1/(1+e^-x) - Used for binary classification</li>
+                <li><strong>Softmax:</strong> Used for multi-class classification</li>
+            </ul>
+            
+            <h3>Code Example: Simple Neural Network</h3>
+            <pre><code>import torch
+import torch.nn as nn
+
+class NeuralNetwork(nn.Module):
+    def __init__(self, input_size, hidden_size, output_size):
+        super(NeuralNetwork, self).__init__()
+        self.fc1 = nn.Linear(input_size, hidden_size)
+        self.relu = nn.ReLU()
+        self.fc2 = nn.Linear(hidden_size, output_size)
+    
+    def forward(self, x):
+        out = self.fc1(x)
+        out = self.relu(out)
+        out = self.fc2(out)
+        return out
+
+# Create model instance
+model = NeuralNetwork(784, 128, 10)
+print(model)</code></pre>
+            
+            <h3>Backpropagation</h3>
+            <p>Backpropagation is the key algorithm for training neural networks. It calculates gradients of the loss function with respect to the weights using the chain rule of calculus.</p>
+            
+            <h3>Training Process</h3>
+            <p>1. Forward pass: Input data flows through network<br>
+            2. Calculate loss: Compare predictions with actual labels<br>
+            3. Backward pass: Compute gradients using backpropagation<br>
+            4. Update weights: Apply gradient descent to minimize loss</p>
+            
+            <h3>Conclusion</h3>
+            <p>Understanding these fundamentals is crucial for building effective deep learning models. Practice implementing networks from scratch to solidify these concepts.</p>
+        `,
+        'note-2': `
+            <h2>PyTorch Tutorial Series</h2>
+            <h3>Getting Started with PyTorch</h3>
+            <p>PyTorch is an open-source machine learning library developed by Facebook's AI Research lab. It provides tensor computation with GPU acceleration and automatic differentiation.</p>
+            
+            <h3>Installation</h3>
+            <pre><code>pip install torch torchvision torchaudio</code></pre>
+            
+            <h3>Basic Tensor Operations</h3>
+            <pre><code>import torch
+
+# Create tensors
+x = torch.tensor([1, 2, 3])
+y = torch.randn(3, 3)
+
+# Operations
+z = x + 5
+matrix_mult = torch.matmul(y, y.T)
+
+# GPU acceleration
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+x = x.to(device)</code></pre>
+            
+            <h3>Building a Simple Model</h3>
+            <pre><code>import torch.nn as nn
+import torch.optim as optim
+
+# Define model
+class SimpleModel(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.linear1 = nn.Linear(10, 50)
+        self.linear2 = nn.Linear(50, 1)
+        
+    def forward(self, x):
+        x = torch.relu(self.linear1(x))
+        x = self.linear2(x)
+        return x
+
+model = SimpleModel()
+criterion = nn.MSELoss()
+optimizer = optim.Adam(model.parameters(), lr=0.001)</code></pre>
+            
+            <h3>Training Loop</h3>
+            <pre><code>for epoch in range(100):
+    # Forward pass
+    outputs = model(inputs)
+    loss = criterion(outputs, targets)
+    
+    # Backward pass
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+    
+    if epoch % 10 == 0:
+        print(f'Epoch {epoch}, Loss: {loss.item()}')</code></pre>
+            
+            <h3>Key Concepts</h3>
+            <p>• <strong>Autograd:</strong> Automatic differentiation engine<br>
+            • <strong>DataLoader:</strong> Efficient data loading and batching<br>
+            • <strong>nn.Module:</strong> Base class for all neural network modules<br>
+            • <strong>Optimizers:</strong> Implement optimization algorithms</p>
+            
+            <h3>Next Steps</h3>
+            <p>Practice building CNNs for image classification, RNNs for sequence data, and transformers for NLP tasks. Experiment with different architectures and hyperparameters.</p>
+        `,
+        'note-3': `
+            <h2>CNN Architectures Comparison</h2>
+            <h3>Overview</h3>
+            <p>Convolutional Neural Networks (CNNs) have revolutionized computer vision. This note compares popular architectures and their key innovations.</p>
+            
+            <h3>LeNet-5 (1998)</h3>
+            <p><strong>Layers:</strong> 7 (Conv-Pool-Conv-Pool-FC-FC-Output)<br>
+            <strong>Innovation:</strong> First successful CNN for handwritten digits<br>
+            <strong>Parameters:</strong> ~60K</p>
+            
+            <h3>AlexNet (2012)</h3>
+            <p><strong>Innovation:</strong> Deep CNN with ReLU, dropout, and data augmentation<br>
+            <strong>Parameters:</strong> ~60M<br>
+            <strong>Impact:</strong> Won ImageNet 2012, sparked deep learning revolution</p>
+            
+            <h3>VGG-16 (2014)</h3>
+            <p><strong>Key Idea:</strong> Use small 3x3 filters throughout<br>
+            <strong>Depth:</strong> 16-19 layers<br>
+            <strong>Parameters:</strong> ~138M<br>
+            <strong>Advantage:</strong> Simple, uniform architecture</p>
+            <pre><code># VGG Block Example
+import torch.nn as nn
+
+class VGGBlock(nn.Module):
+    def __init__(self, in_channels, out_channels, num_convs):
+        super().__init__()
+        layers = []
+        for _ in range(num_convs):
+            layers.append(nn.Conv2d(in_channels, out_channels, 3, padding=1))
+            layers.append(nn.ReLU())
+            in_channels = out_channels
+        layers.append(nn.MaxPool2d(2, 2))
+        self.block = nn.Sequential(*layers)</code></pre>
+            
+            <h3>ResNet (2015)</h3>
+            <p><strong>Innovation:</strong> Skip connections solve vanishing gradient<br>
+            <strong>Depth:</strong> 50-152 layers possible<br>
+            <strong>Key Concept:</strong> Residual learning: F(x) + x</p>
+            <pre><code>class ResidualBlock(nn.Module):
+    def __init__(self, channels):
+        super().__init__()
+        self.conv1 = nn.Conv2d(channels, channels, 3, padding=1)
+        self.conv2 = nn.Conv2d(channels, channels, 3, padding=1)
+        self.relu = nn.ReLU()
+        
+    def forward(self, x):
+        residual = x
+        out = self.relu(self.conv1(x))
+        out = self.conv2(out)
+        out += residual  # Skip connection
+        out = self.relu(out)
+        return out</code></pre>
+            
+            <h3>Inception/GoogLeNet (2014)</h3>
+            <p><strong>Innovation:</strong> Multi-scale feature extraction<br>
+            <strong>Key Idea:</strong> Inception modules with parallel convolutions<br>
+            <strong>Parameters:</strong> ~7M (fewer than VGG despite deeper)</p>
+            
+            <h3>EfficientNet (2019)</h3>
+            <p><strong>Innovation:</strong> Compound scaling (depth + width + resolution)<br>
+            <strong>Efficiency:</strong> Best accuracy-to-parameters ratio<br>
+            <strong>Method:</strong> Neural architecture search + smart scaling</p>
+            
+            <h3>Performance Comparison (ImageNet Top-5)</h3>
+            <p>• AlexNet: 84.6%<br>
+            • VGG-16: 92.7%<br>
+            • ResNet-50: 92.9%<br>
+            • Inception-v3: 93.9%<br>
+            • EfficientNet-B7: 96.7%</p>
+            
+            <h3>Choosing an Architecture</h3>
+            <p><strong>For learning:</strong> Start with VGG (simple structure)<br>
+            <strong>For performance:</strong> ResNet or EfficientNet<br>
+            <strong>For speed:</strong> MobileNet or SqueezeNet<br>
+            <strong>For custom tasks:</strong> Transfer learning with pretrained models</p>
+            
+            <h3>Conclusion</h3>
+            <p>Modern CNNs build on these foundational architectures. Understanding their innovations helps in designing custom networks for specific tasks.</p>
+        `,
+        'note-4': `
+            <h2>Understanding LLMs: Large Language Models</h2>
+            <h3>What are Large Language Models?</h3>
+            <p>Large Language Models (LLMs) are neural networks trained on vast amounts of text data to understand and generate human-like text. They form the backbone of modern AI applications like ChatGPT, Claude, and Gemini.</p>
+            
+            <h3>Architecture: The Transformer</h3>
+            <p>LLMs are built on the transformer architecture introduced in the paper "Attention is All You Need" (2017).</p>
+            
+            <h3>Key Components</h3>
+            <p><strong>1. Self-Attention Mechanism:</strong></p>
+            <pre><code>import torch
+import torch.nn as nn
+
+class SelfAttention(nn.Module):
+    def __init__(self, embed_size, heads):
+        super().__init__()
+        self.embed_size = embed_size
+        self.heads = heads
+        self.head_dim = embed_size // heads
+        
+        self.queries = nn.Linear(embed_size, embed_size)
+        self.keys = nn.Linear(embed_size, embed_size)
+        self.values = nn.Linear(embed_size, embed_size)
+        self.fc_out = nn.Linear(embed_size, embed_size)
+        
+    def forward(self, x):
+        N, seq_length, _ = x.shape
+        
+        # Linear projections
+        Q = self.queries(x)
+        K = self.keys(x)
+        V = self.values(x)
+        
+        # Calculate attention scores
+        energy = torch.matmul(Q, K.transpose(-2, -1))
+        attention = torch.softmax(energy / (self.head_dim ** 0.5), dim=-1)
+        
+        # Apply attention to values
+        out = torch.matmul(attention, V)
+        return self.fc_out(out)</code></pre>
+            
+            <p><strong>2. Positional Encoding:</strong> Since transformers have no inherent notion of sequence order, positional encodings are added to give the model information about token positions.</p>
+            
+            <p><strong>3. Feed-Forward Networks:</strong> Each layer has a position-wise feed-forward network applied to each position separately.</p>
+            
+            <h3>Training LLMs</h3>
+            <p><strong>Pre-training:</strong> Unsupervised learning on massive text corpora<br>
+            <strong>Objective:</strong> Next token prediction (causal language modeling)<br>
+            <strong>Data Scale:</strong> Trillions of tokens<br>
+            <strong>Compute:</strong> Thousands of GPUs for months</p>
+            
+            <h3>Fine-Tuning Techniques</h3>
+            <p><strong>Full Fine-Tuning:</strong> Update all parameters (expensive)<br>
+            <strong>LoRA (Low-Rank Adaptation):</strong> Add trainable rank decomposition matrices<br>
+            <strong>Prompt Tuning:</strong> Learn soft prompts while keeping model frozen<br>
+            <strong>RLHF:</strong> Reinforcement Learning from Human Feedback</p>
+            
+            <h3>LoRA Implementation Example</h3>
+            <pre><code>from peft import LoraConfig, get_peft_model
+from transformers import AutoModelForCausalLM
+
+# Load base model
+model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b")
+
+# Configure LoRA
+lora_config = LoraConfig(
+    r=16,  # Rank
+    lora_alpha=32,
+    target_modules=["q_proj", "v_proj"],
+    lora_dropout=0.05,
+    bias="none",
+    task_type="CAUSAL_LM"
+)
+
+# Apply LoRA
+model = get_peft_model(model, lora_config)
+model.print_trainable_parameters()
+# Output: trainable params: 4.7M || all params: 6.7B || trainable%: 0.07%</code></pre>
+            
+            <h3>Popular LLM Families</h3>
+            <p><strong>GPT Series:</strong> OpenAI's autoregressive models<br>
+            <strong>Llama:</strong> Meta's open-source LLMs<br>
+            <strong>Claude:</strong> Anthropic's constitutional AI<br>
+            <strong>Gemini:</strong> Google's multimodal models<br>
+            <strong>Mistral:</strong> Efficient open-source models</p>
+            
+            <h3>Applications</h3>
+            <p>• Text generation and completion<br>
+            • Question answering and chatbots<br>
+            • Code generation and debugging<br>
+            • Translation and summarization<br>
+            • Creative writing and content creation</p>
+            
+            <h3>Challenges and Considerations</h3>
+            <p><strong>Hallucinations:</strong> Models can generate plausible but incorrect information<br>
+            <strong>Bias:</strong> Training data biases reflected in outputs<br>
+            <strong>Context Length:</strong> Limited by memory and compute<br>
+            <strong>Cost:</strong> Inference and training are expensive</p>
+            
+            <h3>Future Directions</h3>
+            <p>• Longer context windows (100K+ tokens)<br>
+            • Multimodal models (text + vision + audio)<br>
+            • More efficient architectures<br>
+            • Better reasoning and planning capabilities<br>
+            • Reduced hallucinations through retrieval augmentation</p>
+            
+            <h3>Conclusion</h3>
+            <p>LLMs represent a paradigm shift in NLP. Understanding their architecture, training, and fine-tuning techniques is essential for modern data science practitioners. The field evolves rapidly—stay updated with latest research!</p>
+        `
+    };
+    
     // Open modal
     viewNoteBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            const noteCard = btn.closest('.note-card');
-            const noteTitle = noteCard.querySelector('h3').textContent;
-            const noteContent = noteCard.getAttribute('data-content') || `
+            const noteId = btn.getAttribute('data-note-id');
+            const noteContent = noteContents[noteId] || `
                 <h2>${noteTitle}</h2>
                 <h3>Introduction</h3>
                 <p>This is a placeholder for your embedded note content. You can add full articles, tutorials, or detailed notes here.</p>
@@ -471,14 +780,103 @@ class MyModel(nn.Module):
 // =======================================
 function initLoadMore() {
     const loadMoreBtn = document.getElementById('loadMoreProjects');
+    const projectsGrid = document.querySelector('.completed-projects-grid');
     
-    if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', () => {
-            // Add your logic to load more projects dynamically
-            // This is a placeholder - you can fetch from API or load hidden elements
-            alert('Load more functionality - Add your projects data source here!');
+    if (!loadMoreBtn || !projectsGrid) return;
+    
+    // Additional projects data (sorted by date - latest first)
+    const additionalProjects = [
+        {
+            date: '2025-12-01',
+            icon: 'fa-database',
+            title: 'Customer Churn Prediction Model',
+            description: 'Built ML model to predict customer churn with 92% accuracy using ensemble methods and feature engineering.',
+            tech: ['Python', 'Scikit-learn', 'XGBoost', 'Pandas'],
+            links: [
+                { icon: 'fab fa-github', text: 'GitHub', url: 'https://github.com/Labib1610' },
+                { icon: 'fas fa-file-pdf', text: 'Report', url: '#' }
+            ]
+        },
+        {
+            date: '2025-11-15',
+            icon: 'fa-image',
+            title: 'Image Classification with ResNet',
+            description: 'Implemented transfer learning using ResNet-50 for multi-class image classification achieving 95% accuracy.',
+            tech: ['PyTorch', 'ResNet', 'OpenCV', 'Matplotlib'],
+            links: [
+                { icon: 'fab fa-github', text: 'GitHub', url: 'https://github.com/Labib1610' },
+                { icon: 'fas fa-play-circle', text: 'Demo', url: '#' }
+            ]
+        },
+        {
+            date: '2025-11-01',
+            icon: 'fa-chart-pie',
+            title: 'Sales Forecasting Dashboard',
+            description: 'Created interactive dashboard with time series forecasting using ARIMA and Prophet models.',
+            tech: ['Python', 'Streamlit', 'Prophet', 'Plotly'],
+            links: [
+                { icon: 'fab fa-github', text: 'GitHub', url: 'https://github.com/Labib1610' },
+                { icon: 'fas fa-external-link-alt', text: 'Live', url: '#' }
+            ]
+        }
+    ];
+    
+    let projectsLoaded = false;
+    
+    loadMoreBtn.addEventListener('click', () => {
+        if (projectsLoaded) {
+            // Scroll to top of completed projects if all loaded
+            document.getElementById('completed-projects').scrollIntoView({ behavior: 'smooth' });
+            return;
+        }
+        
+        // Add new projects
+        additionalProjects.forEach(project => {
+            const projectCard = document.createElement('div');
+            projectCard.className = 'completed-project-card';
+            projectCard.style.opacity = '0';
+            projectCard.style.transform = 'translateY(20px)';
+            
+            const linksHTML = project.links.map(link => 
+                `<a href="${link.url}" class="project-link" target="_blank">
+                    <i class="${link.icon}"></i> ${link.text}
+                </a>`
+            ).join('\n');
+            
+            const techHTML = project.tech.map(tech => 
+                `<span class="tech-tag">${tech}</span>`
+            ).join('\n');
+            
+            projectCard.innerHTML = `
+                <div class="project-header">
+                    <div class="project-icon-wrapper">
+                        <i class="fas ${project.icon}"></i>
+                    </div>
+                    <span class="completion-badge"><i class="fas fa-check-circle"></i> Completed</span>
+                </div>
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <div class="project-tech">
+                    ${techHTML}
+                </div>
+                <div class="project-links">
+                    ${linksHTML}
+                </div>
+            `;
+            
+            projectsGrid.appendChild(projectCard);
+            
+            // Animate in
+            setTimeout(() => {
+                projectCard.style.transition = 'all 0.5s ease';
+                projectCard.style.opacity = '1';
+                projectCard.style.transform = 'translateY(0)';
+            }, 100);
         });
-    }
+        
+        projectsLoaded = true;
+        loadMoreBtn.innerHTML = '<i class="fas fa-arrow-up"></i> Back to Top';
+    });
 }
 
 // =======================================
