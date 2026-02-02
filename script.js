@@ -776,108 +776,108 @@ class MyModel(nn.Module):
 }
 
 // =======================================
-// Load More Projects
+// Load More Projects  To be added on load more projects here
 // =======================================
-function initLoadMore() {
-    const loadMoreBtn = document.getElementById('loadMoreProjects');
-    const projectsGrid = document.querySelector('.completed-projects-grid');
+// function initLoadMore() {
+//     const loadMoreBtn = document.getElementById('loadMoreProjects');
+//     const projectsGrid = document.querySelector('.completed-projects-grid');
     
-    if (!loadMoreBtn || !projectsGrid) return;
+//     if (!loadMoreBtn || !projectsGrid) return;
     
-    // Additional projects data (sorted by date - latest first)   To be added on load more projects here
-    // const additionalProjects = [
-    //     {
-    //         date: '2025-12-01',
-    //         icon: 'fa-database',
-    //         title: 'Customer Churn Prediction Model',
-    //         description: 'Built ML model to predict customer churn with 92% accuracy using ensemble methods and feature engineering.',
-    //         tech: ['Python', 'Scikit-learn', 'XGBoost', 'Pandas'],
-    //         links: [
-    //             { icon: 'fab fa-github', text: 'GitHub', url: 'https://github.com/Labib1610' },
-    //             { icon: 'fas fa-file-pdf', text: 'Report', url: '#' }
-    //         ]
-    //     },
-    //     {
-    //         date: '2025-11-15',
-    //         icon: 'fa-image',
-    //         title: 'Image Classification with ResNet',
-    //         description: 'Implemented transfer learning using ResNet-50 for multi-class image classification achieving 95% accuracy.',
-    //         tech: ['PyTorch', 'ResNet', 'OpenCV', 'Matplotlib'],
-    //         links: [
-    //             { icon: 'fab fa-github', text: 'GitHub', url: 'https://github.com/Labib1610' },
-    //             { icon: 'fas fa-play-circle', text: 'Demo', url: '#' }
-    //         ]
-    //     },
-    //     {
-    //         date: '2025-11-01',
-    //         icon: 'fa-chart-pie',
-    //         title: 'Sales Forecasting Dashboard',
-    //         description: 'Created interactive dashboard with time series forecasting using ARIMA and Prophet models.',
-    //         tech: ['Python', 'Streamlit', 'Prophet', 'Plotly'],
-    //         links: [
-    //             { icon: 'fab fa-github', text: 'GitHub', url: 'https://github.com/Labib1610' },
-    //             { icon: 'fas fa-external-link-alt', text: 'Live', url: '#' }
-    //         ]
-    //     }
-    // ];
+//     // Additional projects data (sorted by date - latest first)   
+//     const additionalProjects = [
+//         {
+//             date: '2025-12-01',
+//             icon: 'fa-database',
+//             title: 'Customer Churn Prediction Model',
+//             description: 'Built ML model to predict customer churn with 92% accuracy using ensemble methods and feature engineering.',
+//             tech: ['Python', 'Scikit-learn', 'XGBoost', 'Pandas'],
+//             links: [
+//                 { icon: 'fab fa-github', text: 'GitHub', url: 'https://github.com/Labib1610' },
+//                 { icon: 'fas fa-file-pdf', text: 'Report', url: '#' }
+//             ]
+//         },
+//         {
+//             date: '2025-11-15',
+//             icon: 'fa-image',
+//             title: 'Image Classification with ResNet',
+//             description: 'Implemented transfer learning using ResNet-50 for multi-class image classification achieving 95% accuracy.',
+//             tech: ['PyTorch', 'ResNet', 'OpenCV', 'Matplotlib'],
+//             links: [
+//                 { icon: 'fab fa-github', text: 'GitHub', url: 'https://github.com/Labib1610' },
+//                 { icon: 'fas fa-play-circle', text: 'Demo', url: '#' }
+//             ]
+//         },
+//         {
+//             date: '2025-11-01',
+//             icon: 'fa-chart-pie',
+//             title: 'Sales Forecasting Dashboard',
+//             description: 'Created interactive dashboard with time series forecasting using ARIMA and Prophet models.',
+//             tech: ['Python', 'Streamlit', 'Prophet', 'Plotly'],
+//             links: [
+//                 { icon: 'fab fa-github', text: 'GitHub', url: 'https://github.com/Labib1610' },
+//                 { icon: 'fas fa-external-link-alt', text: 'Live', url: '#' }
+//             ]
+//         }
+//     ];
     
-    let projectsLoaded = false;
+//     let projectsLoaded = false;
     
-    loadMoreBtn.addEventListener('click', () => {
-        if (projectsLoaded) {
-            // Scroll to top of completed projects if all loaded
-            document.getElementById('completed-projects').scrollIntoView({ behavior: 'smooth' });
-            return;
-        }
+//     loadMoreBtn.addEventListener('click', () => {
+//         if (projectsLoaded) {
+//             // Scroll to top of completed projects if all loaded
+//             document.getElementById('completed-projects').scrollIntoView({ behavior: 'smooth' });
+//             return;
+//         }
         
-        // Add new projects
-        additionalProjects.forEach(project => {
-            const projectCard = document.createElement('div');
-            projectCard.className = 'completed-project-card';
-            projectCard.style.opacity = '0';
-            projectCard.style.transform = 'translateY(20px)';
+//         // Add new projects
+//         additionalProjects.forEach(project => {
+//             const projectCard = document.createElement('div');
+//             projectCard.className = 'completed-project-card';
+//             projectCard.style.opacity = '0';
+//             projectCard.style.transform = 'translateY(20px)';
             
-            const linksHTML = project.links.map(link => 
-                `<a href="${link.url}" class="project-link" target="_blank">
-                    <i class="${link.icon}"></i> ${link.text}
-                </a>`
-            ).join('\n');
+//             const linksHTML = project.links.map(link => 
+//                 `<a href="${link.url}" class="project-link" target="_blank">
+//                     <i class="${link.icon}"></i> ${link.text}
+//                 </a>`
+//             ).join('\n');
             
-            const techHTML = project.tech.map(tech => 
-                `<span class="tech-tag">${tech}</span>`
-            ).join('\n');
+//             const techHTML = project.tech.map(tech => 
+//                 `<span class="tech-tag">${tech}</span>`
+//             ).join('\n');
             
-            projectCard.innerHTML = `
-                <div class="project-header">
-                    <div class="project-icon-wrapper">
-                        <i class="fas ${project.icon}"></i>
-                    </div>
-                    <span class="completion-badge"><i class="fas fa-check-circle"></i> Completed</span>
-                </div>
-                <h3>${project.title}</h3>
-                <p>${project.description}</p>
-                <div class="project-tech">
-                    ${techHTML}
-                </div>
-                <div class="project-links">
-                    ${linksHTML}
-                </div>
-            `;
+//             projectCard.innerHTML = `
+//                 <div class="project-header">
+//                     <div class="project-icon-wrapper">
+//                         <i class="fas ${project.icon}"></i>
+//                     </div>
+//                     <span class="completion-badge"><i class="fas fa-check-circle"></i> Completed</span>
+//                 </div>
+//                 <h3>${project.title}</h3>
+//                 <p>${project.description}</p>
+//                 <div class="project-tech">
+//                     ${techHTML}
+//                 </div>
+//                 <div class="project-links">
+//                     ${linksHTML}
+//                 </div>
+//             `;
             
-            projectsGrid.appendChild(projectCard);
+//             projectsGrid.appendChild(projectCard);
             
-            // Animate in
-            setTimeout(() => {
-                projectCard.style.transition = 'all 0.5s ease';
-                projectCard.style.opacity = '1';
-                projectCard.style.transform = 'translateY(0)';
-            }, 100);
-        });
+//             // Animate in
+//             setTimeout(() => {
+//                 projectCard.style.transition = 'all 0.5s ease';
+//                 projectCard.style.opacity = '1';
+//                 projectCard.style.transform = 'translateY(0)';
+//             }, 100);
+//         });
         
-        projectsLoaded = true;
-        loadMoreBtn.innerHTML = '<i class="fas fa-arrow-up"></i> Back to Top';
-    });
-}
+//         projectsLoaded = true;
+//         loadMoreBtn.innerHTML = '<i class="fas fa-arrow-up"></i> Back to Top';
+//     });
+// }
 
 // =======================================
 // Add New Note Button
