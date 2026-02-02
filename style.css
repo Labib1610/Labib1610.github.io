@@ -1564,27 +1564,58 @@ section {
 
 
 /* ========================================
-   MOBILE FIXES (Paste at the very bottom of style.css)
+   FAIL-SAFE MOBILE FIXES (Replace the previous block at bottom of style.css)
    ======================================== */
 
 @media (max-width: 768px) {
-    /* 1. Force Completed Projects to be a single column fitting the screen */
-    .completed-projects-grid {
-        grid-template-columns: 1fr !important;
-        gap: 1.5rem;
+    /* 1. RESET GRID TO FLEX: This kills the "minmax" width restriction completely */
+    .completed-projects-grid,
+    .notes-grid,
+    .project-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
     }
 
-    /* 2. Allow the card to shrink below 350px */
-    .completed-project-card {
-        width: 100%;
-        min-width: 0; /* Critical: Allows flex/grid items to shrink */
-        padding: 1.5rem; /* Reduce padding slightly to save space */
+    /* 2. FORCE CARDS TO FIT: Ensure cards don't exceed screen width */
+    .completed-project-card,
+    .note-card,
+    .project-card {
+        width: 100% !important;
+        min-width: 0 !important; /* Allows text to wrap instead of pushing width */
+        max-width: 100% !important;
+        margin: 0 !important;
+        box-sizing: border-box !important; /* Includes padding in width calculation */
     }
 
-    /* 3. Ensure the container holding the grid doesn't overflow */
+    /* 3. FIX CONTAINER PADDING: Give content more room on narrow screens */
+    section {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        overflow-x: hidden !important; /* Prevents horizontal scrollbar */
+    }
+    
     .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        overflow-x: hidden; /* Prevents horizontal scroll */
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* 4. PREVIOUS HERO FIXES (Keep these) */
+    .hero {
+        padding-top: 7rem !important;
+        padding-bottom: 7rem !important;
+        min-height: auto !important;
+    }
+
+    .profile-card {
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto !important;
+        height: auto !important;
+        aspect-ratio: 1/1 !important;
+    }
+    
+    .profile-icon {
+        font-size: 4rem !important;
     }
 }
