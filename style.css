@@ -1247,8 +1247,12 @@ section {
 }
 
 .load-more-container {
+    width: 100%;
+    display: block;
     text-align: center;
     margin-top: 3rem;
+    padding-bottom: 2rem;
+    clear: both; /* Ensures it sits below everything */
 }
 
 .load-more-btn {
