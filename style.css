@@ -230,8 +230,7 @@ body {
 }
 
 .hero-name {
-    /* CHANGE: clamp(minimum, preferred, maximum) for responsive text */
-    font-size: clamp(2.5rem, 5vw, 4rem); 
+    font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.2;
@@ -245,8 +244,7 @@ body {
 }
 
 .hero-title {
-    /* CHANGE: Responsive font size */
-    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
     color: var(--text-secondary);
@@ -324,11 +322,8 @@ body {
 
 .profile-card {
     position: relative;
-    /* CHANGE: Replaced fixed 400px with responsive values */
-    width: 100%; 
-    max-width: 400px;
-    height: auto;
-    aspect-ratio: 1/1; /* Keeps it square */
+    width: 400px;
+    height: 400px;
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
     border-radius: 30px;
     border: 2px solid rgba(99, 102, 241, 0.2);
@@ -856,19 +851,11 @@ section {
     }
 
     .hero-name {
-    /* CHANGE: clamp(minimum, preferred, maximum) for responsive text */
-    font-size: clamp(2.5rem, 5vw, 4rem); 
-    font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+        font-size: 2.5rem;
     }
 
     .hero-title {
-    /* CHANGE: Responsive font size */
-    font-size: clamp(1.2rem, 3vw, 2rem);
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    color: var(--text-secondary);
+        font-size: 1.5rem;
     }
 
     .hero-buttons {
@@ -926,32 +913,15 @@ section {
     .skills-grid {
         grid-template-columns: 1fr;
     }
-
-    section {
-        padding: 3rem 1.5rem;
-    }
-    
-    .hero {
-        padding-top: 8rem; /* Space for navbar */
-        min-height: auto; /* Allow height to grow naturally */
-    }
 }
 
 @media (max-width: 480px) {
     .hero-name {
-    /* CHANGE: clamp(minimum, preferred, maximum) for responsive text */
-    font-size: clamp(2.5rem, 5vw, 4rem); 
-    font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+        font-size: 2rem;
     }
 
     .hero-title {
-    /* CHANGE: Responsive font size */
-    font-size: clamp(1.2rem, 3vw, 2rem);
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    color: var(--text-secondary);
+        font-size: 1.2rem;
     }
 
     .btn {
@@ -960,7 +930,7 @@ section {
     }
 
     .section-title {
-        font-size: clamp(1.5rem, 4vw, 1.75rem);
+        font-size: 1.75rem;
     }
 
     .profile-card {
@@ -1535,15 +1505,6 @@ section {
     
     .note-modal-body {
         padding: 2rem 1.5rem;
-    }
-
-    section {
-        padding: 3rem 1.5rem;
-    }
-    
-    .hero {
-        padding-top: 8rem; /* Space for navbar */
-        min-height: auto; /* Allow height to grow naturally */
     }
 }
 
