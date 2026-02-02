@@ -906,12 +906,52 @@ section {
         font-size: 2rem;
     }
 
-    .project-grid {
-        grid-template-columns: 1fr;
+    /* FIX: Ensure grids don't overflow */
+    .project-grid, 
+    .skills-grid,
+    .completed-projects-grid,
+    .notes-grid {
+        grid-template-columns: 1fr; /* Force single column on mobile */
     }
 
-    .skills-grid {
-        grid-template-columns: 1fr;
+    /* FIX: Add more padding to bottom of hero so Scroll Button doesn't overlap card */
+    .hero {
+        padding-top: 8rem;
+        padding-bottom: 8rem; /* Increased space for scroll button */
+        min-height: auto;
+    }
+
+    /* FIX: Profile Card Size & Icon */
+    .profile-card {
+        width: 100%;           /* Fluid width */
+        max-width: 320px;      /* Cap width so it doesn't get huge */
+        height: auto;          /* Remove fixed height */
+        aspect-ratio: 1/1;     /* Keep it square-ish */
+        padding: 2rem;         /* Reduce padding */
+    }
+
+    .profile-icon {
+        font-size: 4rem;       /* Shrink icon from 8rem to 4rem */
+        margin-bottom: 0;      /* Remove extra space */
+    }
+
+    .tech-icons {
+        gap: 0.5rem;           /* Tighter spacing for icons */
+    }
+
+    .tech-icon {
+        width: 40px;           /* Smaller tech icons */
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    /* FIX: Adjust modal padding */
+    .note-modal-content {
+        margin: 1rem;
+    }
+    
+    .note-modal-body {
+        padding: 2rem 1.5rem;
     }
 }
 
