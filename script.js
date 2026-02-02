@@ -784,42 +784,42 @@ function initLoadMore() {
     
     if (!loadMoreBtn || !projectsGrid) return;
     
-    // Additional projects data (sorted by date - latest first)
-    const additionalProjects = [
-        {
-            date: '2025-12-01',
-            icon: 'fa-database',
-            title: 'Customer Churn Prediction Model',
-            description: 'Built ML model to predict customer churn with 92% accuracy using ensemble methods and feature engineering.',
-            tech: ['Python', 'Scikit-learn', 'XGBoost', 'Pandas'],
-            links: [
-                { icon: 'fab fa-github', text: 'GitHub', url: 'https://github.com/Labib1610' },
-                { icon: 'fas fa-file-pdf', text: 'Report', url: '#' }
-            ]
-        },
-        {
-            date: '2025-11-15',
-            icon: 'fa-image',
-            title: 'Image Classification with ResNet',
-            description: 'Implemented transfer learning using ResNet-50 for multi-class image classification achieving 95% accuracy.',
-            tech: ['PyTorch', 'ResNet', 'OpenCV', 'Matplotlib'],
-            links: [
-                { icon: 'fab fa-github', text: 'GitHub', url: 'https://github.com/Labib1610' },
-                { icon: 'fas fa-play-circle', text: 'Demo', url: '#' }
-            ]
-        },
-        {
-            date: '2025-11-01',
-            icon: 'fa-chart-pie',
-            title: 'Sales Forecasting Dashboard',
-            description: 'Created interactive dashboard with time series forecasting using ARIMA and Prophet models.',
-            tech: ['Python', 'Streamlit', 'Prophet', 'Plotly'],
-            links: [
-                { icon: 'fab fa-github', text: 'GitHub', url: 'https://github.com/Labib1610' },
-                { icon: 'fas fa-external-link-alt', text: 'Live', url: '#' }
-            ]
-        }
-    ];
+    // Additional projects data (sorted by date - latest first)   To be added on load more projects here
+    // const additionalProjects = [
+    //     {
+    //         date: '2025-12-01',
+    //         icon: 'fa-database',
+    //         title: 'Customer Churn Prediction Model',
+    //         description: 'Built ML model to predict customer churn with 92% accuracy using ensemble methods and feature engineering.',
+    //         tech: ['Python', 'Scikit-learn', 'XGBoost', 'Pandas'],
+    //         links: [
+    //             { icon: 'fab fa-github', text: 'GitHub', url: 'https://github.com/Labib1610' },
+    //             { icon: 'fas fa-file-pdf', text: 'Report', url: '#' }
+    //         ]
+    //     },
+    //     {
+    //         date: '2025-11-15',
+    //         icon: 'fa-image',
+    //         title: 'Image Classification with ResNet',
+    //         description: 'Implemented transfer learning using ResNet-50 for multi-class image classification achieving 95% accuracy.',
+    //         tech: ['PyTorch', 'ResNet', 'OpenCV', 'Matplotlib'],
+    //         links: [
+    //             { icon: 'fab fa-github', text: 'GitHub', url: 'https://github.com/Labib1610' },
+    //             { icon: 'fas fa-play-circle', text: 'Demo', url: '#' }
+    //         ]
+    //     },
+    //     {
+    //         date: '2025-11-01',
+    //         icon: 'fa-chart-pie',
+    //         title: 'Sales Forecasting Dashboard',
+    //         description: 'Created interactive dashboard with time series forecasting using ARIMA and Prophet models.',
+    //         tech: ['Python', 'Streamlit', 'Prophet', 'Plotly'],
+    //         links: [
+    //             { icon: 'fab fa-github', text: 'GitHub', url: 'https://github.com/Labib1610' },
+    //             { icon: 'fas fa-external-link-alt', text: 'Live', url: '#' }
+    //         ]
+    //     }
+    // ];
     
     let projectsLoaded = false;
     
