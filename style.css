@@ -1561,3 +1561,30 @@ section {
         font-size: 1.4rem;
     }
 }
+
+
+/* ========================================
+   MOBILE FIXES (Paste at the very bottom of style.css)
+   ======================================== */
+
+@media (max-width: 768px) {
+    /* 1. Force Completed Projects to be a single column fitting the screen */
+    .completed-projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+
+    /* 2. Allow the card to shrink below 350px */
+    .completed-project-card {
+        width: 100%;
+        min-width: 0; /* Critical: Allows flex/grid items to shrink */
+        padding: 1.5rem; /* Reduce padding slightly to save space */
+    }
+
+    /* 3. Ensure the container holding the grid doesn't overflow */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        overflow-x: hidden; /* Prevents horizontal scroll */
+    }
+}
