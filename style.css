@@ -322,8 +322,11 @@ body {
 
 .profile-card {
     position: relative;
-    width: 400px;
-    height: 400px;
+    /* CHANGE: Replaced fixed 400px with responsive values */
+    width: 100%; 
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1/1; /* Keeps it square */
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
     border-radius: 30px;
     border: 2px solid rgba(99, 102, 241, 0.2);
