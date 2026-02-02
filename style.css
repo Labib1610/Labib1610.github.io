@@ -230,7 +230,8 @@ body {
 }
 
 .hero-name {
-    font-size: 3.5rem;
+    /* CHANGE: clamp(minimum, preferred, maximum) for responsive text */
+    font-size: clamp(2.5rem, 5vw, 4rem); 
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.2;
@@ -244,7 +245,8 @@ body {
 }
 
 .hero-title {
-    font-size: 2rem;
+    /* CHANGE: Responsive font size */
+    font-size: clamp(1.2rem, 3vw, 2rem);
     font-weight: 600;
     margin-bottom: 1.5rem;
     color: var(--text-secondary);
@@ -854,11 +856,19 @@ section {
     }
 
     .hero-name {
-        font-size: 2.5rem;
+    /* CHANGE: clamp(minimum, preferred, maximum) for responsive text */
+    font-size: clamp(2.5rem, 5vw, 4rem); 
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
     }
 
     .hero-title {
-        font-size: 1.5rem;
+    /* CHANGE: Responsive font size */
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
     }
 
     .hero-buttons {
@@ -916,15 +926,32 @@ section {
     .skills-grid {
         grid-template-columns: 1fr;
     }
+
+    section {
+        padding: 3rem 1.5rem;
+    }
+    
+    .hero {
+        padding-top: 8rem; /* Space for navbar */
+        min-height: auto; /* Allow height to grow naturally */
+    }
 }
 
 @media (max-width: 480px) {
     .hero-name {
-        font-size: 2rem;
+    /* CHANGE: clamp(minimum, preferred, maximum) for responsive text */
+    font-size: clamp(2.5rem, 5vw, 4rem); 
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
     }
 
     .hero-title {
-        font-size: 1.2rem;
+    /* CHANGE: Responsive font size */
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
     }
 
     .btn {
@@ -933,7 +960,7 @@ section {
     }
 
     .section-title {
-        font-size: 1.75rem;
+        font-size: clamp(1.5rem, 4vw, 1.75rem);
     }
 
     .profile-card {
@@ -1508,6 +1535,15 @@ section {
     
     .note-modal-body {
         padding: 2rem 1.5rem;
+    }
+
+    section {
+        padding: 3rem 1.5rem;
+    }
+    
+    .hero {
+        padding-top: 8rem; /* Space for navbar */
+        min-height: auto; /* Allow height to grow naturally */
     }
 }
 
