@@ -201,26 +201,55 @@
             <div class="featured-carousel">
                 <div class="carousel-container">
                     <div class="carousel-track">
-                        <!-- Project 1 -->
+                        <!-- Project 1 - Mind the Scale -->
                         <div class="featured-project-slide active">
                             <div class="featured-project-card">
                                 <div class="featured-project-image">
-                                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop" alt="LLM Project">
+                                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=600&fit=crop" alt="Hyperbolic Geometry Research">
                                     <div class="project-status">
                                         <span class="status-badge working"><i class="fas fa-spinner fa-spin"></i> In Progress</span>
                                     </div>
                                 </div>
                                 <div class="featured-project-content">
-                                    <h3>BanglaVerse: A Benchmark Dataset for Visual Understanding of Multilingual Vision-Language Models in Bangla with Cultural Awareness</h3>
-                                    <p>A major initiative to convert standard Bengali text into regional dialects (Barisal, Sylhet, Chittagong etc.). This project creates resources for low-resource dialect modeling and linguistic preservation.</p>
+                                    <h3>Mind the Scale: Fair Comparison Reveals When Hyperbolic Geometry Helps Linguistic Hierarchies</h3>
+                                    <p>Investigating whether hyperbolic geometry genuinely outperforms Euclidean geometry for modeling linguistic hierarchies, through controlled fair-comparison experiments across multiple NLP tasks.</p>
                                     <div class="project-tech">
                                         <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">PyTorch</span>
+                                        <span class="tech-tag">NLP</span>
                                     </div>
                                     <div class="project-progress">
                                         <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 75%"></div>
+                                            <div class="progress-fill" style="width: 70%"></div>
                                         </div>
-                                        <span class="progress-text">75% Complete</span>
+                                        <span class="progress-text">70% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 - NP Completeness Benchmark -->
+                        <div class="featured-project-slide">
+                            <div class="featured-project-card">
+                                <div class="featured-project-image">
+                                    <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&h=600&fit=crop" alt="NP Completeness Benchmark">
+                                    <div class="project-status">
+                                        <span class="status-badge working"><i class="fas fa-spinner fa-spin"></i> In Progress</span>
+                                    </div>
+                                </div>
+                                <div class="featured-project-content">
+                                    <h3>NP Completeness Benchmark</h3>
+                                    <p>Developing a comprehensive benchmark to evaluate LLMs' understanding and reasoning capabilities on NP-complete problems and computational complexity theory.</p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">LLMs</span>
+                                        <span class="tech-tag">Benchmarking</span>
+                                    </div>
+                                    <div class="project-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 40%"></div>
+                                        </div>
+                                        <span class="progress-text">40% Complete</span>
                                     </div>
                                 </div>
                             </div>
@@ -296,7 +325,6 @@
                 <div class="carousel-dots" id="featuredDots">
                     <span class="dot active" data-slide="0"></span>
                     <span class="dot" data-slide="1"></span>
-                    <span class="dot" data-slide="2"></span>
                 </div>
             </div>
         </div>
@@ -312,29 +340,99 @@
             </div>
             
             <div class="completed-projects-grid">
-                <!-- Project 1 -->
-                <div class="completed-project-card">
+
+                <!-- Research Paper 1 - MULTIHALUDET -->
+                <div class="completed-project-card research-card">
+                    <div class="project-header">
+                        <div class="project-icon-wrapper">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <span class="completion-badge"><i class="fas fa-check-circle"></i> Accepted</span>
+                    </div>
+                    <span class="venue-badge"><i class="fas fa-award"></i> MeLLM Workshop · ACL 2026</span>
+                    <h3>MULTIHALUDET: Multilingual Hallucination Detection via LLM Hidden State Probing</h3>
+                    <p>A novel three-stage stacking framework detecting multilingual hallucinations by probing full hidden state trajectories of frozen LLMs, achieving up to 98.55% AUROC across English, French, Bangla, and Amharic.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">LLMs</span>
+                        <span class="tech-tag">Hallucination Detection</span>
+                        <span class="tech-tag">Multilingual NLP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/alvi-uiu/MULTIHALUDET" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://aclanthology.org/2026.mellm-1.6.pdf" class="project-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Paper
+                        </a>
+                        <button class="project-link read-more-btn" data-paper-id="multihaludet">
+                            <i class="fas fa-book-open"></i> Read More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Research Paper 2 - BanglaRiddle -->
+                <div class="completed-project-card research-card">
                     <div class="project-header">
                         <div class="project-icon-wrapper">
                             <i class="fas fa-brain"></i>
                         </div>
-                        <span class="completion-badge"><i class="fas fa-check-circle"></i> Completed</span>
+                        <span class="completion-badge"><i class="fas fa-check-circle"></i> Accepted</span>
                     </div>
+                    <span class="venue-badge"><i class="fas fa-award"></i> *SEM 2026</span>
                     <h3>Can LLMs Solve My Grandma’s Riddle? Evaluating Multilingual Large Language Models on Reasoning Traditional Bangla Tricky Riddles</h3>
-                    <p>Constructed a dataset of Bengali riddles (Dhadha) to evaluate cultural reasoning in LLMs. Extracted data, analyzed linguistic patterns, and created evaluation benchmarks for riddle solving tasks.</p>
+                    <p>BanglaRiddleEval: a benchmark of 1,244 traditional Bangla riddles across four tasks. MCQ accuracy peaks at ~56% vs. 83.3% human baseline, revealing major gaps in LLM figurative reasoning for low-resource languages.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
+                        <span class="tech-tag">LLMs</span>
+                        <span class="tech-tag">Benchmarking</span>
+                        <span class="tech-tag">Low-Resource NLP</span>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/Labib1610/BanglaRiddleEval" class="project-link" target="_blank">
                             <i class="fab fa-github"></i> GitHub
                         </a>
-                        <a href="https://arxiv.org/abs/2512.20324" class="project-link">
+                        <a href="https://aclanthology.org/2026.starsem-conference.22.pdf" class="project-link" target="_blank">
                             <i class="fas fa-file-pdf"></i> Paper
                         </a>
-                        <!-- <a href="#" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Demo
-                        </a> -->
+                        <button class="project-link read-more-btn" data-paper-id="banglariddle">
+                            <i class="fas fa-book-open"></i> Read More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Research Paper 3 - BanglaVerse -->
+                <div class="completed-project-card research-card">
+                    <div class="project-header">
+                        <div class="project-icon-wrapper">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <span class="completion-badge preprint-badge"><i class="fas fa-clock"></i> Under Review</span>
+                    </div>
+                    <h3>Many Dialects, Many Languages, One Cultural Lens: Evaluating Multilingual VLMs for Bengali Culture Understanding Across Historically Linked Languages and Regional Dialects</h3>
+                    <p>BanglaVerse: a culturally grounded benchmark for multilingual VLMs built from 1,152 manually curated images across nine domains, expanded into four languages and five Bangla dialects yielding ~32.3K artifacts.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Vision-Language Models</span>
+                        <span class="tech-tag">Multimodal AI</span>
+                        <span class="tech-tag">Bengali NLP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/faiyazabdullah/BanglaVerse" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://arxiv.org/pdf/2603.21165" class="project-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Paper
+                        </a>
+                        <a href="https://huggingface.co/datasets/FaiyazAbdullah114708/BanglaVerse" class="project-link" target="_blank">
+                            <i class="fas fa-database"></i> Dataset
+                        </a>
+                        <a href="https://labib1610.github.io/BanglaVerse/" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Website
+                        </a>
+                        <button class="project-link read-more-btn" data-paper-id="banglaverse">
+                            <i class="fas fa-book-open"></i> Read More
+                        </button>
                     </div>
                 </div>
 
@@ -688,6 +786,18 @@
             </div> -->
         </div>
     </section>
+
+    <!-- Paper Abstract Modal -->
+    <div class="note-modal" id="paperModal">
+        <div class="note-modal-content">
+            <button class="modal-close" id="closePaperModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="note-modal-body" id="paperModalBody">
+                <!-- Paper abstract loaded dynamically -->
+            </div>
+        </div>
+    </div>
 
     <!-- Note Modal (for embedded notes) -->
     <div class="note-modal" id="noteModal">
