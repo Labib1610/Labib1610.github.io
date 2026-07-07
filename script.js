@@ -96,12 +96,16 @@ const dots = document.querySelectorAll("#featuredDots .dot");
 let currentSlide = 0;
 let autoSlideTimer;
 
+const carouselTrack = document.querySelector(".carousel-track");
+
 function goToSlide(index) {
-    slides[currentSlide].classList.remove("active");
+    if (!slides.length) return;
     dots[currentSlide]?.classList.remove("active");
     currentSlide = (index + slides.length) % slides.length;
-    slides[currentSlide].classList.add("active");
     dots[currentSlide]?.classList.add("active");
+    if (carouselTrack) {
+        carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
 }
 
 function startAutoSlide() {
