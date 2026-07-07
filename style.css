@@ -1835,3 +1835,22 @@ section {
     line-height: 1.6;
     margin: 0;
 }
+
+
+/* === Note card with multiple links === */
+.note-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.note-link-alt {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.note-link-alt:hover {
+    background: var(--primary-color);
+    color: white;
+}
