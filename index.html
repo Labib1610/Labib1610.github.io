@@ -1,919 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nurul Labib Sayeedi</title>
-    <meta name="description" content="Data Science portfolio showcasing machine learning, LLMs, and AI projects">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nurul Labib Sayeedi</title>
+	<meta name="description" content="Nurul Labib Sayeedi - 3rd Year Undergraduate at United International University. Research on Natural Language Processing, Multilingualism, and Multimodal Machine Learning.">
+	<meta name="author" content="Nurul Labib Sayeedi">
+	<link rel="icon" type="image/png" href="img/icon.png">
+
+	<!-- css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="stylesheet" href="css/pace.css">
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- js -->
+	<script src="js/pace.min.js"></script>
 </head>
-<body>
-    <!-- Animated Background with Image Slideshow -->
-    <div class="animated-bg">
-        <div class="bg-slideshow">
-            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1920&q=80');"></div>
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80');"></div>
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1920&q=80');"></div>
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1920&q=80');"></div>
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80');"></div>
-        </div>
-        <div class="gradient-circle circle-1"></div>
-        <div class="gradient-circle circle-2"></div>
-        <div class="gradient-circle circle-3"></div>
-    </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-bracket">&lt;</span>
-                <span class="logo-text">nurul-labib-sayeedi</span>
-                <span class="logo-bracket">/&gt;</span>
-            </div>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#featured-projects" class="nav-link">Featured</a></li>
-                <li><a href="#completed-projects" class="nav-link">Completed</a></li>
-                <li><a href="#notes" class="nav-link">Notes</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<body class="graph-paper">
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="greeting">Hello, I'm</p>
-                <h1 class="hero-name">
-                    <span class="highlight">Nurul Labib Sayeedi</span>
-                </h1>
-                <h2 class="hero-title">
-                    <span class="typing-text">I'm a <span id="typewriter"></span><span class="cursor">|</span></span>
-                </h2>
-                <p class="hero-description">
-                    Data Science student passionate about machine learning, artificial intelligence, and large language models.
-                    Building intelligent solutions through data-driven insights and cutting-edge AI technologies.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#featured-projects" class="btn btn-primary">
-                        <i class="fas fa-briefcase"></i> View My Work
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i> Get in Touch
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="profile-card profile-card-photo">
-                    <img src="assets/profile.jpeg" alt="Nurul Labib Sayeedi" class="profile-photo">
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <a href="#about">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <p>Scroll Down</p>
-            </a>
-        </div>
-    </section>
+	<!-- header -->
+	<div class="container">
+		<header id="site-header">
+			<a class="site-brand" href="index.html">
+				<img src="img/icon.png" alt="" class="logo-icon">
+				Nurul Labib <span>Sayeedi</span>
+			</a>
+			<nav class="site-nav" aria-label="Main">
+				<ul>
+					<li><span class="current">About</span></li>
+					<li><a href="publications.html">Publications</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="blog/index.html">Blog</a></li>
+					<li><a href="honor_achievement.html">Awards</a></li>
+				</ul>
+			</nav>
+			<button type="button" id="trigger-overlay" class="menu-toggle" aria-label="Open menu"
+				aria-controls="site-menu" aria-expanded="false">
+				<span class="ion-navicon"></span>
+			</button>
+		</header>
+	</div>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-intro">
-                        I'm a Data Science student with a passion for solving complex problems using AI and machine learning.
-                    </p>
-                    <p>
-                        With expertise in Python, machine learning algorithms, and large language models (LLMs), I specialize in 
-                        building intelligent systems that extract insights from data. I'm constantly exploring new developments 
-                        in AI and deep learning to stay at the forefront of technology.
-                    </p>
-                    <p>
-                        Whether it's natural language processing, predictive modeling, or data analysis.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <h3>2</h3>
-                            <p>Projects</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>3</h3>
-                            <p>Research</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>5</h3>
-                            <p>Total</p>
-                        </div>
-                    </div>
+	<!-- main content -->
+	<div class="content-body">
+		<div class="container">
 
-                    <!-- Experience -->
-                    <div class="about-block">
-                        <h3 class="about-block-title"><i class="fas fa-briefcase"></i> Work Experience</h3>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-header">
-                                    <span class="timeline-role">Undergraduate Teaching Assistant (UGA)</span>
-                                    <span class="timeline-date">Spring 2026 · Ongoing</span>
-                                </div>
-                                <span class="timeline-org">United International University (UIU)</span>
-                                <p class="timeline-desc">Assisting courses including DBMS and DSA I across Spring 2026, Fall 2025, and Summer 2025 (1 year).</p>
-                            </div>
-                        </div>
-                    </div>
+			<!-- Profile -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="profile">
+						<div class="profile-grid">
+							<!-- identity: photo and profile links -->
+							<div class="profile-side">
+								<div class="profile-photo-wrap">
+									<img class="profile-photo" src="img/labib.jpeg" alt="Nurul Labib Sayeedi">
+								</div>
+								<div class="profile-link-groups">
+									<div class="link-group">
+										<span class="link-group-label">Academic profiles</span>
+										<ul class="icon-links">
+											<li><a href="https://scholar.google.com/citations?user=cv1GHaUAAAAJ&hl=en" target="_blank" rel="noopener"><span class="icon ion-university" aria-hidden="true"></span>Google Scholar</a></li>
+											<li><a href="https://aclanthology.org/people/nurul-labib-sayeedi/" target="_blank" rel="noopener"><span class="icon ion-document-text" aria-hidden="true"></span>ACL Anthology</a></li>
+											<li><a href="https://dblp.org/pid/425/1779.html" target="_blank" rel="noopener"><span class="icon ion-ios-list-outline" aria-hidden="true"></span>DBLP</a></li>
+											<li><a href="https://www.semanticscholar.org/author/Nurul-Labib-Sayeedi/2400417205" target="_blank" rel="noopener"><span class="icon ion-ios-search" aria-hidden="true"></span>Semantic Scholar</a></li>
+											<li><a href="https://openreview.net/profile?id=%7ENurul_Labib_Sayeedi1" target="_blank" rel="noopener"><span class="icon ion-ios-chatbubble-outline" aria-hidden="true"></span>OpenReview</a></li>
+											<li><a href="https://orcid.org/0009-0002-4116-3917" target="_blank" rel="noopener"><span class="icon ion-ios-person-outline" aria-hidden="true"></span>ORCID</a></li>
+											<li><a href="https://www.researchgate.net/profile/Nurul-Sayeedi?ev=hdr_xprf" target="_blank" rel="noopener"><span class="icon ion-ios-people-outline" aria-hidden="true"></span>ResearchGate</a></li>
+										</ul>
+									</div>
+									<div class="link-group">
+										<span class="link-group-label">Social</span>
+										<ul class="icon-links">
+											<li><a href="mailto:nsayeedi2410045@bsds.uiu.ac.bd"><span class="icon ion-ios-email-outline" aria-hidden="true"></span>Email</a></li>
+											<li><a href="https://github.com/Labib1610" target="_blank" rel="noopener"><span class="icon ion-social-github" aria-hidden="true"></span>GitHub</a></li>
+											<li><a href="https://www.linkedin.com/in/nurul-labib-sayeedi/" target="_blank" rel="noopener"><span class="icon ion-social-linkedin" aria-hidden="true"></span>LinkedIn</a></li>
+											<li><a href="https://x.com/LabibSayeedi" target="_blank" rel="noopener"><span class="icon icon-x" aria-hidden="true">𝕏</span>X</a></li>
+											<li><a href="https://www.facebook.com/nurul.labib.sayeedi" target="_blank" rel="noopener"><span class="icon ion-social-facebook" aria-hidden="true"></span>Facebook</a></li>
+										</ul>
+									</div>
+									<div class="link-group">
+										<span class="link-group-label">CV</span>
+										<ul class="icon-links">
+											<li><a href="assets/Labib_CV.pdf" target="_blank" rel="noopener"><span class="icon ion-document" aria-hidden="true"></span>Download CV (PDF)</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
 
-                    <!-- Education -->
-                    <div class="about-block">
-                        <h3 class="about-block-title"><i class="fas fa-graduation-cap"></i> Education</h3>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-header">
-                                    <span class="timeline-role">B.Sc. in Data Science</span>
-                                    <span class="timeline-date">2024 · Ongoing</span>
-                                </div>
-                                <span class="timeline-org">United International University (UIU)</span>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-header">
-                                    <span class="timeline-role">Higher Secondary Certificate (HSC)</span>
-                                    <span class="timeline-date">2021 – 2023</span>
-                                </div>
-                                <span class="timeline-org">EUSC · GPA 4.5</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+							<!-- about: role and bio -->
+							<div class="profile-main">
+								<p class="profile-affiliation">
+									3rd Year Undergraduate, UIU &nbsp;&middot; Dhaka, Bangladesh
+								</p>
+								<div class="bio">
+									<p>Hi! My name is <strong>Nurul Labib Sayeedi</strong>. I am a 3rd year undergraduate student pursuing a Bachelor of Science in <span class="hl">Data Science</span> at <span class="hl">United International University (UIU)</span>, Bangladesh.</p>
+									<p>My research focuses on Natural Language Processing, with particular interest in low-resource language evaluation, multilingual benchmarking, and multimodal machine learning. My work has been published at <strong>EMNLP</strong> (Findings 2026), <strong>*SEM 2026</strong> (co-located with ACL), <strong>EACL 2027</strong> (Findings), and the <strong>ACL 2026 Workshop on Multilinguality in the Era of LLMs (MeLLM)</strong>.</p>
+									<p>I am currently serving as an <span class="hl">Undergraduate Teaching Assistant (UTA)</span> at UIU, assisting with courses in Database Management Systems and Data Structures &amp; Algorithms.</p>
+								</div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Skills & Expertise</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Machine Learning & AI</h3>
-                    <ul class="skill-list">
-                        <li><i class="fas fa-check"></i> Large Language Models (LLMs)</li>
-                        <li><i class="fas fa-check"></i> Deep Learning</li>
-                        <li><i class="fas fa-check"></i> Natural Language Processing</li>
-                        <li><i class="fas fa-check"></i> Computer Vision</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>Data Analysis</h3>
-                    <ul class="skill-list">
-                        <li><i class="fas fa-check"></i> Python (NumPy, Pandas)</li>
-                        <li><i class="fas fa-check"></i> Data Visualization</li>
-                        <li><i class="fas fa-check"></i> Statistical Analysis</li>
-                        <li><i class="fas fa-check"></i> SQL & Databases</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Tools & Frameworks</h3>
-                    <ul class="skill-list">
-                        <li><i class="fas fa-check"></i> TensorFlow & PyTorch</li>
-                        <li><i class="fas fa-check"></i> Scikit-learn</li>
-                        <li><i class="fas fa-check"></i> Jupyter Notebook</li>
-                        <li><i class="fas fa-check"></i> Git & GitHub</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+								<!-- bio-aside: sports/hobbies — not applicable -->
+								<!--
+								<div class="bio-aside">
+									<p class="aside-text">
+										⚽ When I am not immersed in code, datasets, or late-night paper submissions, I am likely cheering for my favorite football club. As a die-hard fan of <strong>Real Madrid</strong>, I follow every match with the same passion I bring to my research &mdash; <em>Hala Madrid, siempre!</em>
+										<img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg"
+											alt="Real Madrid" style="width: 20px; height: auto; margin: 0 2px -4px 2px;">
+										When it is not football, it is a UFC fight night, a tennis five-setter, or a Formula 1 race weekend.
+									</p>
+									<ul class="hobby-chips">
+										<li><span class="hobby-emoji">⚽</span>Football</li>
+										<li><span class="hobby-emoji">🥋</span>MMA UFC</li>
+										<li><span class="hobby-emoji">🎾</span>Tennis</li>
+										<li><span class="hobby-emoji">🏎️</span>Formula 1</li>
+									</ul>
+								</div>
+								-->
 
-    <!-- Featured Projects Section (Currently Working On) -->
-    <section id="featured-projects" class="featured-projects-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">Currently working on these exciting projects</p>
-            </div>
-            
-            <!-- Project Carousel -->
-            <div class="featured-carousel">
-                <div class="carousel-container">
-                    <div class="carousel-track">
-                        <!-- Project 1 - Mind the Scale -->
-                        <div class="featured-project-slide active">
-                            <div class="featured-project-card">
-                                <div class="featured-project-image">
-                                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=600&fit=crop" alt="Hyperbolic Geometry Research">
-                                    <div class="project-status">
-                                        <span class="status-badge working"><i class="fas fa-spinner fa-spin"></i> In Progress</span>
-                                    </div>
-                                </div>
-                                <div class="featured-project-content">
-                                    <h3>Mind the Scale: Fair Comparison Reveals When Hyperbolic Geometry Helps Linguistic Hierarchies</h3>
-                                    <p>Investigating whether hyperbolic geometry genuinely outperforms Euclidean geometry for modeling linguistic hierarchies, through controlled fair-comparison experiments across multiple NLP tasks.</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">Python</span>
-                                        <span class="tech-tag">PyTorch</span>
-                                        <span class="tech-tag">NLP</span>
-                                    </div>
-                                    <div class="project-progress">
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 70%"></div>
-                                        </div>
-                                        <span class="progress-text">70% Complete</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+								<!-- PhD callout — not applicable; currently a 3rd year undergraduate -->
+								<!--
+								<aside class="phd-callout">
+									<span class="phd-icon ion-university" aria-hidden="true"></span>
+									<div class="phd-body">
+										<span class="phd-label">Open to PhD positions</span>
+										<h3 class="phd-title">Seeking a fully funded PhD position</h3>
+										<p class="phd-text">
+											I am applying for PhD admission in <strong>Natural Language Processing</strong>,
+											<strong>Multilingualism</strong>, and <strong>Multimodal Learning</strong>.
+										</p>
+										<span class="phd-actions">
+											<a href="mailto:nsayeedi2410045@bsds.uiu.ac.bd">Get in touch</a>
+										</span>
+									</div>
+								</aside>
+								-->
+							</div>
+						</div>
 
-                        <!-- Project 2 - NP Completeness Benchmark -->
-                        <div class="featured-project-slide">
-                            <div class="featured-project-card">
-                                <div class="featured-project-image">
-                                    <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&h=600&fit=crop" alt="NP Completeness Benchmark">
-                                    <div class="project-status">
-                                        <span class="status-badge working"><i class="fas fa-spinner fa-spin"></i> In Progress</span>
-                                    </div>
-                                </div>
-                                <div class="featured-project-content">
-                                    <h3>NP Completeness Benchmark</h3>
-                                    <p>Developing a comprehensive benchmark to evaluate LLMs' understanding and reasoning capabilities on NP-complete problems and computational complexity theory.</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">Python</span>
-                                        <span class="tech-tag">LLMs</span>
-                                        <span class="tech-tag">Benchmarking</span>
-                                    </div>
-                                    <div class="project-progress">
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 40%"></div>
-                                        </div>
-                                        <span class="progress-text">40% Complete</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+						<ul class="fact-grid">
+							<li class="fact fact-wide">
+								<span class="fact-icon ion-ios-analytics" aria-hidden="true"></span>
+								<span class="fact-body">
+									<span class="fact-label">Research focus</span>
+									<span class="fact-value">Natural Language Processing &middot; Multilingualism &middot; Multimodal Learning</span>
+									<span class="fact-meta">Low-resource and culturally grounded NLP; how large language and vision&ndash;language models perform across languages, dialects, and resource-constrained settings; hallucination detection, figurative language reasoning, and multilingual benchmarking</span>
+								</span>
+							</li>
+							<li class="fact">
+								<span class="fact-icon ion-university" aria-hidden="true"></span>
+								<span class="fact-body">
+									<span class="fact-label">Education</span>
+									<span class="fact-value">B.Sc. in Data Science, United International University</span>
+									<span class="fact-meta">Currently in 3rd year (2024&ndash;Present). Previously: Higher Secondary Certificate, EUSC &middot; GPA 4.5 (2021&ndash;2023).</span>
+								</span>
+							</li>
+							<li class="fact">
+								<span class="fact-icon ion-document-text" aria-hidden="true"></span>
+								<span class="fact-body">
+									<span class="fact-label">Published at</span>
+									<span class="fact-value venue-row">
+										<span class="venue">EMNLP</span><span class="venue">*SEM</span><span class="venue">EACL</span><span class="venue">ACL Workshop</span>
+									</span>
+									<span class="fact-meta">Full list on <a href="publications.html">Publications</a> and <a href="https://scholar.google.com/citations?user=cv1GHaUAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</span>
+								</span>
+							</li>
+							<li class="fact">
+								<span class="fact-icon ion-ios-briefcase" aria-hidden="true"></span>
+								<span class="fact-body">
+									<span class="fact-label">Currently</span>
+									<span class="fact-value">Undergraduate Teaching Assistant, UIU</span>
+									<span class="fact-meta">Assisting with Database Management Systems and Data Structures &amp; Algorithms (Summer 2025&ndash;Present, 3 semesters).</span>
+								</span>
+							</li>
+						</ul>
 
-                        <!-- Project 2 -->
-                        <!-- <div class="featured-project-slide">
-                            <div class="featured-project-card">
-                                <div class="featured-project-image">
-                                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop" alt="RAG System">
-                                    <div class="project-status">
-                                        <span class="status-badge working"><i class="fas fa-spinner fa-spin"></i> In Progress</span>
-                                    </div>
-                                </div>
-                                <div class="featured-project-content">
-                                    <h3>RAG-Based Knowledge Assistant</h3>
-                                    <p>Building an intelligent knowledge retrieval system using Retrieval-Augmented Generation with vector databases for enhanced contextual responses.</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">Python</span>
-                                        <span class="tech-tag">LangChain</span>
-                                        <span class="tech-tag">ChromaDB</span>
-                                        <span class="tech-tag">OpenAI</span>
-                                    </div>
-                                    <div class="project-progress">
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 45%"></div>
-                                        </div>
-                                        <span class="progress-text">45% Complete</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
+						<ul class="metrics">
+							<li><span class="num">7</span><span class="label">Research papers</span></li>
+							<li><span class="num">4</span><span class="label">Peer-reviewed</span></li>
+							<li><span class="num">3</span><span class="label">Preprints</span></li>
+							<li><span class="num">3</span><span class="label">Semesters as UTA</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 
-                        <!-- Project 3 -->
-                        <!-- <div class="featured-project-slide">
-                            <div class="featured-project-card">
-                                <div class="featured-project-image">
-                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="Data Pipeline">
-                                    <div class="project-status">
-                                        <span class="status-badge working"><i class="fas fa-spinner fa-spin"></i> In Progress</span>
-                                    </div>
-                                </div>
-                                <div class="featured-project-content">
-                                    <h3>Real-Time Data Analytics Pipeline</h3>
-                                    <p>Creating a scalable ETL pipeline for processing and analyzing large-scale datasets with real-time monitoring and automated reporting.</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">Python</span>
-                                        <span class="tech-tag">Apache Spark</span>
-                                        <span class="tech-tag">Kafka</span>
-                                        <span class="tech-tag">PostgreSQL</span>
-                                    </div>
-                                    <div class="project-progress">
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 80%"></div>
-                                        </div>
-                                        <span class="progress-text">80% Complete</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                    </div>
-                </div>
-                
-                <!-- Carousel Controls -->
-                <button class="carousel-btn prev-btn" id="prevFeatured">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-btn next-btn" id="nextFeatured">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-                
-                <!-- Carousel Dots -->
-                <div class="carousel-dots" id="featuredDots">
-                    <span class="dot active" data-slide="0"></span>
-                    <span class="dot" data-slide="1"></span>
-                </div>
-            </div>
-        </div>
-    </section>
+			<!-- News | Research Interests -->
+			<div class="row split section">
+				<div class="col-md-7" id="news">
+					<h2 class="section-title">
+						News
+						<span class="section-more">scroll for the full timeline &darr;</span>
+					</h2>
+					<div class="feed-fill">
+					<div class="news-feed">
+						<ul class="news-list">
+							<li>
+								<span class="news-emoji">📄</span>
+								<span class="news-body"><span class="news-date">Nov 2026</span><span
+										class="news-text">Paper accepted to the Findings of <strong>EACL 2027</strong>: <em>To What Extent Do Large Language Models Understand Bangla Idioms?</em></span></span>
+							</li>
+							<li>
+								<span class="news-emoji">📄</span>
+								<span class="news-body"><span class="news-date">Aug 2026</span><span
+										class="news-text">Paper accepted to the Findings of <strong>EMNLP 2026</strong>: <em>Many Dialects, Many Languages, One Cultural Lens: Evaluating Multilingual VLMs for Bengali Culture Understanding Across Historically Linked Languages and Regional Dialects</em></span></span>
+							</li>
+							<li>
+								<span class="news-emoji">📄</span>
+								<span class="news-body"><span class="news-date">May 2026</span><span
+										class="news-text">Paper accepted at <strong>*SEM 2026</strong>, co-located with ACL 2026: <em>Can LLMs Solve My Grandma&rsquo;s Riddle? Evaluating Multilingual Large Language Models on Reasoning Traditional Bangla Tricky Riddles</em></span></span>
+							</li>
+							<li>
+								<span class="news-emoji">📄</span>
+								<span class="news-body"><span class="news-date">May 2026</span><span
+										class="news-text">Paper accepted at the <strong>ACL 2026 Workshop on Multilinguality in the Era of LLMs (MeLLM)</strong>: <em>MULTIHALUDET: Multilingual Hallucination Detection via LLM Hidden State Probing</em></span></span>
+							</li>
+							<li>
+								<span class="news-emoji">📝</span>
+								<span class="news-body"><span class="news-date">2026</span><span
+										class="news-text">Preprint posted: <em>Did the Problem Actually Get Harder? Testing LLMs on Paired P and NP-Complete Problems Hardened by Adversarial Multi-Agent Rewriting</em></span></span>
+							</li>
+							<li>
+								<span class="news-emoji">📝</span>
+								<span class="news-body"><span class="news-date">2026</span><span
+										class="news-text">Preprint posted: <em>Mind the Scale: Fair Comparison Reveals When Hyperbolic Geometry Helps Linguistic Hierarchies</em></span></span>
+							</li>
+							<li>
+								<span class="news-emoji">🔬</span>
+								<span class="news-body"><span class="news-date">Summer 2025</span><span
+										class="news-text">Started as <strong>Undergraduate Teaching Assistant (UTA)</strong> at United International University, assisting with DBMS and DSA courses.</span></span>
+							</li>
+						</ul>
+					</div>
+					</div>
+				</div>
+				<div class="col-md-5" id="research">
+					<h2 class="section-title">Research Interests</h2>
+					<ul class="interest-grid">
+						<li>
+							<h4>Natural Language Processing</h4>
+							<p>Evaluation and benchmarking of large language models, low-resource NLP, reasoning, hallucination detection, and figurative language understanding in culturally grounded settings.</p>
+						</li>
+						<li>
+							<h4>Multilingualism</h4>
+							<p>Low-resource and dialectal languages, cross-lingual transfer, culturally grounded evaluation, and performance gaps LLMs carry across language families and dialects.</p>
+						</li>
+						<!-- Knowledge Representation — not in current research focus -->
+						<!--
+						<li>
+							<h4>Knowledge Representation</h4>
+							<p>Hyperbolic embeddings, hierarchical structures, and geometric models for language data.</p>
+						</li>
+						-->
+						<li>
+							<h4>Multimodal Learning</h4>
+							<p>Vision&ndash;language models, culturally grounded multimodal benchmarks, and evaluation of VLMs across historically linked languages and regional dialects.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
 
-    <!-- Completed Projects Section -->
-    <section id="completed-projects" class="completed-projects-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Completed Projects</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">Successfully completed research and development projects</p>
-            </div>
-            
-            <div class="completed-projects-grid">
+			<!-- Experience -->
+			<div class="row section">
+				<div class="col-md-12" id="experience">
+					<h2 class="section-title">
+						Experience
+						<a class="section-more" href="publications.html">publications &rarr;</a>
+					</h2>
+					<ul class="timeline">
+						<li class="tl-current">
+							<span class="tl-role">Undergraduate Teaching Assistant (UTA)</span>
+							<span class="tl-where">United International University &mdash; Database Management Systems, Data Structures &amp; Algorithms I</span>
+							<span class="tl-when">Summer 2025 &ndash; Present</span>
+						</li>
+					</ul>
+				</div>
+			</div>
 
-                <!-- Research Paper 1 - MULTIHALUDET -->
-                <div class="completed-project-card research-card">
-                    <div class="project-header">
-                        <div class="project-icon-wrapper">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <span class="completion-badge"><i class="fas fa-check-circle"></i> Accepted</span>
-                    </div>
-                    <span class="venue-badge"><i class="fas fa-award"></i> MeLLM Workshop · ACL 2026</span>
-                    <h3>MULTIHALUDET: Multilingual Hallucination Detection via LLM Hidden State Probing</h3>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">LLMs</span>
-                        <span class="tech-tag">Hallucination Detection</span>
-                        <span class="tech-tag">Multilingual NLP</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/alvi-uiu/MULTIHALUDET" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://aclanthology.org/2026.mellm-1.6.pdf" class="project-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Paper
-                        </a>
-                        <button class="project-link read-more-btn" data-paper-id="multihaludet">
-                            <i class="fas fa-book-open"></i> Read More
-                        </button>
-                    </div>
-                </div>
+			<!-- Academic Service — commented out; no reviewing/mentoring service yet -->
+			<!--
+			<div class="row section">
+				<div class="col-md-12" id="service">
+					<h2 class="section-title">Academic Service</h2>
+					<p class="section-note">Reviewing, mentoring and teaching contributions.</p>
+					<ul class="interest-grid">
+						<li>
+							<h4>Conferences &amp; Workshops</h4>
+							<p>...</p>
+						</li>
+						<li>
+							<h4>Mentoring &amp; Teaching</h4>
+							<p>...</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			-->
 
-                <!-- Research Paper 2 - BanglaRiddle -->
-                <div class="completed-project-card research-card">
-                    <div class="project-header">
-                        <div class="project-icon-wrapper">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <span class="completion-badge"><i class="fas fa-check-circle"></i> Accepted</span>
-                    </div>
-                    <span class="venue-badge"><i class="fas fa-award"></i> *SEM 2026</span>
-                    <h3>Can LLMs Solve My Grandma’s Riddle? Evaluating Multilingual Large Language Models on Reasoning Traditional Bangla Tricky Riddles</h3>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">LLMs</span>
-                        <span class="tech-tag">Benchmarking</span>
-                        <span class="tech-tag">Low-Resource NLP</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Labib1610/BanglaRiddleEval" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://aclanthology.org/2026.starsem-conference.22.pdf" class="project-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Paper
-                        </a>
-                        <button class="project-link read-more-btn" data-paper-id="banglariddle">
-                            <i class="fas fa-book-open"></i> Read More
-                        </button>
-                    </div>
-                </div>
+			<!-- Research Mentorship — commented out; no formal mentorship program -->
+			<!--
+			<div class="row">
+				<div class="col-md-12 section" id="mentorship">
+					<h2 class="section-title">Research Mentorship</h2>
+					<p class="section-note">...</p>
+				</div>
+			</div>
+			-->
 
-                <!-- Research Paper 3 - BanglaVerse -->
-                <div class="completed-project-card research-card">
-                    <div class="project-header">
-                        <div class="project-icon-wrapper">
-                            <i class="fas fa-globe-asia"></i>
-                        </div>
-                        <span class="completion-badge preprint-badge"><i class="fas fa-clock"></i> Under Review</span>
-                    </div>
-                    <h3>Many Dialects, Many Languages, One Cultural Lens: Evaluating Multilingual VLMs for Bengali Culture Understanding Across Historically Linked Languages and Regional Dialects</h3>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Vision-Language Models</span>
-                        <span class="tech-tag">Multimodal AI</span>
-                        <span class="tech-tag">Bengali NLP</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/faiyazabdullah/BanglaVerse" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://arxiv.org/pdf/2603.21165" class="project-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Paper
-                        </a>
-                        <a href="https://huggingface.co/datasets/FaiyazAbdullah114708/BanglaVerse" class="project-link" target="_blank">
-                            <i class="fas fa-database"></i> Dataset
-                        </a>
-                        <a href="https://labib1610.github.io/BanglaVerse/" class="project-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Website
-                        </a>
-                        <button class="project-link read-more-btn" data-paper-id="banglaverse">
-                            <i class="fas fa-book-open"></i> Read More
-                        </button>
-                    </div>
-                </div>
+			<!-- Contact -->
+			<div class="row">
+				<div class="col-md-12 section" id="contact">
+					<h2 class="section-title">Contact</h2>
+					<p class="section-note">Happy to talk about research, collaborations, or anything in my work.
+						Email is the fastest way to reach me.</p>
 
-                <!-- Project 2 -->
-                <div class="completed-project-card">
-                    <div class="project-header">
-                        <div class="project-icon-wrapper">
-                            <i class="fas fa-image"></i>
-                        </div>
-                        <span class="completion-badge"><i class="fas fa-check-circle"></i> Completed</span>
-                    </div>
-                    <h3>Neon Gravity Runner</h3>
-                    <div class="project-tech">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Labib1610/neon-gravity-runner" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://labib1610.github.io/neon-gravity-runner" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                        <!-- <a href="#" class="project-link">
-                            <i class="fas fa-file-pdf"></i> Paper
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-chart-bar"></i> Results
-                        </a> -->
-                    </div>
-                </div>
+					<div class="contact-block">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="contact-panel">
+									<h3>Contact details</h3>
+									<ul class="contact-details">
+										<li>
+											<span class="ci ion-ios-email"></span>
+											<span>
+												<span class="cd-label">Email</span>
+												<span class="cd-value"><a href="mailto:nsayeedi2410045@bsds.uiu.ac.bd">nsayeedi2410045@bsds.uiu.ac.bd</a></span>
+											</span>
+										</li>
+										<li>
+											<span class="ci ion-ios-email-outline"></span>
+											<span>
+												<span class="cd-label">Secondary email</span>
+												<span class="cd-value"><a href="mailto:nlabibs2003@gmail.com">nlabibs2003@gmail.com</a></span>
+											</span>
+										</li>
+										<li>
+											<span class="ci ion-ios-location"></span>
+											<span>
+												<span class="cd-label">Location</span>
+												<span class="cd-value">Mohammadpur, Shyamoli, Dhaka, Bangladesh</span>
+											</span>
+										</li>
+									</ul>
 
-                <!-- Project 3 -->
-                <div class="completed-project-card">
-                    <div class="project-header">
-                        <div class="project-icon-wrapper">
-                            <i class="fas fa-image"></i>
-                        </div>
-                        <span class="completion-badge"><i class="fas fa-check-circle"></i> Completed</span>
-                    </div>
-                    <h3>Mr White Game</h3>
-                    <div class="project-tech">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">Python</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Labib1610/mr-white-game" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://labib1610.github.io/mr-white-game/" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                        <!-- <a href="#" class="project-link">
-                            <i class="fas fa-file-pdf"></i> Paper
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-chart-bar"></i> Results
-                        </a> -->
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <!-- <div class="completed-project-card">
-                    <div class="project-header">
-                        <div class="project-icon-wrapper">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <span class="completion-badge"><i class="fas fa-check-circle"></i> Completed</span>
-                    </div>
-                    <h3>Predictive Analytics Dashboard</h3>
-                    <p>Created an interactive dashboard for business forecasting using time series analysis and regression models.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Streamlit</span>
-                        <span class="tech-tag">Prophet</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Labib1610" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-book"></i> Docs
-                        </a>
-                    </div>
-                </div> -->
+									<h3>Find me online</h3>
+									<ul class="profile-links">
+										<li><a href="https://scholar.google.com/citations?user=cv1GHaUAAAAJ&hl=en" target="_blank"
+												rel="noopener">Google Scholar</a></li>
+										<li><a href="https://github.com/Labib1610" target="_blank" rel="noopener">GitHub</a>
+										</li>
+										<li><a href="https://www.linkedin.com/in/nurul-labib-sayeedi/" target="_blank"
+												rel="noopener">LinkedIn</a></li>
+										<li><a href="https://orcid.org/0009-0002-4116-3917" target="_blank"
+												rel="noopener">ORCID</a></li>
+										<li><a href="https://www.researchgate.net/profile/Nurul-Sayeedi?ev=hdr_xprf" target="_blank"
+												rel="noopener">ResearchGate</a></li>
+										<li><a href="https://www.facebook.com/nurul.labib.sayeedi" target="_blank"
+												rel="noopener">Facebook</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-                <!-- Project 4 -->
-                <!-- <div class="completed-project-card">
-                    <div class="project-header">
-                        <div class="project-icon-wrapper">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <span class="completion-badge"><i class="fas fa-check-circle"></i> Completed</span>
-                    </div>
-                    <h3>Customer Segmentation Analysis</h3>
-                    <p>Performed clustering analysis to segment customers using K-means and hierarchical clustering techniques.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Scikit-learn</span>
-                        <span class="tech-tag">Pandas</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Labib1610" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-file-pdf"></i> Report
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-code"></i> Notebook
-                        </a>
-                    </div>
-                </div> -->
+		</div>
+	</div>
 
-                <!-- Project 5 -->
-                <!-- <div class="completed-project-card">
-                    <div class="project-header">
-                        <div class="project-icon-wrapper">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                        <span class="completion-badge"><i class="fas fa-check-circle"></i> Completed</span>
-                    </div>
-                    <h3>Text Generation with GPT</h3>
-                    <p>Fine-tuned GPT model for creative text generation with specific writing styles and domain knowledge.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Transformers</span>
-                        <span class="tech-tag">Hugging Face</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Labib1610" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-play-circle"></i> Try It
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-file-alt"></i> Blog Post
-                        </a>
-                    </div>
-                </div> -->
+	<!-- footer -->
+	<footer id="site-footer">
+		<div class="container">
+			<p class="copyright">&copy; 2026 Nurul Labib Sayeedi. Powered by <a
+				href="https://github.com/UIU-Developers-Hub">@UIU Developers Hub</a>. Hosted by GitHub Pages.</p>
+		</div>
+	</footer>
 
-                <!-- Project 6 -->
-                <!-- <div class="completed-project-card">
-                    <div class="project-header">
-                        <div class="project-icon-wrapper">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <span class="completion-badge"><i class="fas fa-check-circle"></i> Completed</span>
-                    </div>
-                    <h3>Recommendation System</h3>
-                    <p>Implemented a collaborative filtering recommendation system with content-based and hybrid approaches.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">TensorFlow</span>
-                        <span class="tech-tag">Surprise</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Labib1610" class="project-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-file-pdf"></i> Paper
-                        </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-chart-pie"></i> Analysis
-                        </a>
-                    </div>
-                </div>
-            </div> -->
+	<button type="button" id="back-to-top" aria-label="Back to top"><span class="ion-chevron-up"></span></button>
 
-            <!-- Load More Button -->
-            <!-- </div> <div class="load-more-container">
-                <button class="btn btn-primary load-more-btn" id="loadMoreProjects">
-                    <i class="fas fa-plus-circle"></i> Load More Projects
-                </button>
-            </div> -->
-        </div>
-    </section>
+	<!-- mobile menu -->
+	<div class="overlay" id="site-menu">
+		<button type="button" class="overlay-close" aria-label="Close menu"><span class="ion-ios-close-empty"></span></button>
+		<nav aria-label="Mobile">
+			<ul>
+				<li><span class="current">About</span></li>
+				<li><a href="publications.html">Publications</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="blog/index.html">Blog</a></li>
+				<li><a href="honor_achievement.html">Awards</a></li>
+			</ul>
+		</nav>
+	</div>
 
-    <!-- Online Notes Section -->
-    <section id="notes" class="notes-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Notes & Documentation</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">My learning journey and technical documentation</p>
-            </div>
-
-            <!-- Notes Categories -->
-            <div class="notes-filter">
-                <button class="filter-btn active" data-category="all">All Notes</button>
-                <button class="filter-btn" data-category="uiu-note">UIU Course Notes</button>
-                <button class="filter-btn" data-category="uiu-content">UIU Course Contents</button>
-                <button class="filter-btn" data-category="nlp">NLP</button>
-                <!-- <button class="filter-btn" data-category="deep-learning">Deep Learning</button>
-                <button class="filter-btn" data-category="tutorials">Tutorials</button> -->
-            </div>
-
-            <!-- Notes Grid -->
-            <div class="notes-grid">
-                <!-- Note 1 - External Link (Google Drive) -->
-                <div class="note-card" data-category="uiu-note">
-                    <div class="note-header">
-                        <div class="note-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <span class="note-type"><i class="fas fa-external-link-alt"></i> External</span>
-                    </div>
-                    <h3>UIU course notes</h3>
-                    <p>Here I have compiled comprehensive notes covering various subjects taught at UIU.</p>
-                    <!-- <div class="note-meta">
-                        <span><i class="far fa-calendar"></i> Dec 15, 2025</span>
-                        <span><i class="fas fa-file-pdf"></i> PDF</span>
-                    </div> -->
-                    <a href="https://drive.google.com/drive/folders/1UV7qYVxiG2iRL94H3k73X8vziSJCXR7A?usp=sharing" class="note-link" target="_blank">
-                        <i class="fab fa-google-drive"></i> View on Google Drive
-                    </a>
-                </div>
-
-                <!-- Note 2 - Embedded Content -->
-                <div class="note-card" data-category="uiu-content">
-                    <div class="note-header">
-                        <div class="note-icon">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <span class="note-type"><i class="fas fa-file-alt"></i> Embedded</span>
-                    </div>
-                    <h3>UIU Course Contents</h3>
-                    <p>Here I have compiled comprehensive course contents covering various subjects taught at UIU.</p>
-                    <a href="https://drive.google.com/drive/folders/1qaHs-fCyT7oVzV-jSYtDMb_mgp7Z7Wjy?usp=sharing" class="note-link" target="_blank">
-                        <i class="fab fa-google-drive"></i> View on Google Drive
-                    </a>
-                </div>
-
-                <!-- Note 3 - LLM from Scratch (Drive + GitHub) -->
-                <div class="note-card" data-category="nlp">
-                    <div class="note-header">
-                        <div class="note-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <span class="note-type"><i class="fas fa-external-link-alt"></i> External</span>
-                    </div>
-                    <h3>LLM from Scratch</h3>
-                    <p>My notes and implementation code for building large language models from scratch, following the Vizuara series.</p>
-                    <div class="note-links">
-                        <a href="https://drive.google.com/drive/folders/1-ZIqiyHeQjiBj1-n6w8R6gfCkWeBQ7PN?usp=sharing" class="note-link" target="_blank">
-                            <i class="fab fa-google-drive"></i> Notes on Drive
-                        </a>
-                        <a href="https://github.com/Labib1610/LLM-from-Scratch-Vizuara-" class="note-link note-link-alt" target="_blank">
-                            <i class="fab fa-github"></i> Code on GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Note 3 - External Link -->
-                <!-- <div class="note-card" data-category="nlp">
-                    <div class="note-header">
-                        <div class="note-icon">
-                            <i class="fas fa-language"></i>
-                        </div>
-                        <span class="note-type"><i class="fas fa-external-link-alt"></i> External</span>
-                    </div>
-                    <h3>Transformer Architecture Explained</h3>
-                    <p>Detailed analysis of transformer models, attention mechanisms, and their applications in NLP tasks.</p>
-                    <div class="note-meta">
-                        <span><i class="far fa-calendar"></i> Dec 20, 2025</span>
-                        <span><i class="fas fa-file-pdf"></i> PDF</span>
-                    </div>
-                    <a href="#" class="note-link" target="_blank">
-                        <i class="fab fa-google-drive"></i> View on Google Drive
-                    </a>
-                </div> -->
-
-                <!-- Note 4 - Embedded -->
-                <!-- <div class="note-card" data-category="tutorials">
-                    <div class="note-header">
-                        <div class="note-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <span class="note-type"><i class="fas fa-file-alt"></i> Embedded</span>
-                    </div>
-                    <h3>PyTorch Tutorial Series</h3>
-                    <p>Step-by-step guide to building deep learning models with PyTorch, including practical examples and code snippets.</p>
-                    <div class="note-meta">
-                        <span><i class="far fa-calendar"></i> Dec 22, 2025</span>
-                        <span><i class="fas fa-laptop-code"></i> Tutorial</span>
-                    </div>
-                    <button class="note-link view-note-btn" data-note-id="note-2">
-                        <i class="fas fa-eye"></i> Read Here
-                    </button>
-                </div> -->
-
-                <!-- Note 5 - External -->
-                <!-- <div class="note-card" data-category="machine-learning">
-                    <div class="note-header">
-                        <div class="note-icon">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <span class="note-type"><i class="fas fa-external-link-alt"></i> External</span>
-                    </div>
-                    <h3>Feature Engineering Techniques</h3>
-                    <p>Collection of feature engineering methods, dimensionality reduction, and data preprocessing strategies.</p>
-                    <div class="note-meta">
-                        <span><i class="far fa-calendar"></i> Dec 10, 2025</span>
-                        <span><i class="fas fa-file-pdf"></i> PDF</span>
-                    </div>
-                    <a href="#" class="note-link" target="_blank">
-                        <i class="fab fa-google-drive"></i> View on Google Drive
-                    </a>
-                </div> -->
-
-                <!-- Note 6 - Embedded -->
-                <!-- <div class="note-card" data-category="deep-learning">
-                    <div class="note-header">
-                        <div class="note-icon">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                        <span class="note-type"><i class="fas fa-file-alt"></i> Embedded</span>
-                    </div>
-                    <h3>CNN Architectures Comparison</h3>
-                    <p>Comparative study of popular CNN architectures like ResNet, VGG, Inception, and their performance metrics.</p>
-                    <div class="note-meta">
-                        <span><i class="far fa-calendar"></i> Dec 24, 2025</span>
-                        <span><i class="fas fa-chart-line"></i> Analysis</span>
-                    </div>
-                    <button class="note-link view-note-btn" data-note-id="note-3">
-                        <i class="fas fa-eye"></i> Read Here
-                    </button>
-                </div> -->
-
-                <!-- Note 7 - Embedded (NEW: LLM Note) -->
-                <!-- <div class="note-card" data-category="nlp">
-                    <div class="note-header">
-                        <div class="note-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <span class="note-type"><i class="fas fa-file-alt"></i> Embedded</span>
-                    </div>
-                    <h3>Understanding LLMs: Large Language Models</h3>
-                    <p>Comprehensive guide to transformer architecture, attention mechanisms, training techniques, and fine-tuning methods like LoRA and RLHF.</p>
-                    <div class="note-meta">
-                        <span><i class="far fa-calendar"></i> Dec 27, 2025</span>
-                        <span><i class="fas fa-brain"></i> Deep Dive</span>
-                    </div>
-                    <button class="note-link view-note-btn" data-note-id="note-4">
-                        <i class="fas fa-eye"></i> Read Here
-                    </button>
-                </div>
-            </div> -->
-
-            <!-- Add New Note Button -->
-            <!-- <div class="add-note-container">
-                <button class="btn btn-secondary" id="addNoteBtn">
-                    <i class="fas fa-plus"></i> Add New Note
-                </button>
-            </div> -->
-        </div>
-    </section>
-
-    <!-- Paper Abstract Modal -->
-    <div class="note-modal" id="paperModal">
-        <div class="note-modal-content">
-            <button class="modal-close" id="closePaperModal">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="note-modal-body" id="paperModalBody">
-                <!-- Paper abstract loaded dynamically -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Note Modal (for embedded notes) -->
-    <div class="note-modal" id="noteModal">
-        <div class="note-modal-content">
-            <button class="modal-close" id="closeNoteModal">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="note-modal-body" id="noteModalBody">
-                <!-- Note content will be loaded here -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">Have a project in mind? Let's work together!</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h3>Email</h3>
-                            <a href="mailto:nsayeedi2410045@bsds.uiu.ac.bd">nsayeedi2410045@bsds.uiu.ac.bd</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h3>Phone</h3>
-                            <a href="tel:+8801973540515">+880 1973 540515</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h3>Mohammadpur, Shyamoli</h3>
-                            <p>Dhaka, Bangladesh</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/Labib1610" target="_blank" class="social-link" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/nurul-labib-sayeedi/" target="_blank" class="social-link" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://x.com/LabibSayeedi" target="_blank" class="social-link" aria-label="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <!-- <a href="https://codepen.io/yourusername" target="_blank" class="social-link" aria-label="CodePen">
-                        <i class="fab fa-codepen"></i>
-                    </a> -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Nurul Labib Sayeedi. Crafted with <i class="fas fa-heart"></i> and lots of coffee.</p>
-            <p class="footer-subtext">All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top Button -->
-    <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script src="script.js"></script>
+	<script src="js/script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nurul Labib Sayeedi - Publications</title>
+    <link rel="icon" type="image/png" href="img/icon.png">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/pace.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- js -->
+    <script src="js/pace.min.js"></script>
+</head>
+
+<body class="graph-paper">
+    <!-- header -->
+    <div class="container">
+        <header id="site-header">
+            <a class="site-brand" href="index.html">
+                <img src="img/icon.png" alt="" class="logo-icon">
+                Nurul Labib <span>Sayeedi</span>
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><span class="current">Publications</span></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog/index.html">Blog</a></li>
+                    <li><a href="honor_achievement.html">Awards</a></li>
+                </ul>
+            </nav>
+            <button type="button" id="trigger-overlay" class="menu-toggle" aria-label="Open menu"
+                aria-controls="site-menu" aria-expanded="false">
+                <span class="ion-navicon"></span>
+            </button>
+        </header>
+    </div>
+
+    <div class="content-body">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-12">
+                <h2 class="section-title">Publications</h2>
+                <p class="section-note">7 research works &mdash; 3 conference papers, 1 workshop paper, 3 preprints. <strong>Bold</strong> marks my name; * marks equal contribution.</p>
+
+                    <input type="text" id="searchInput" class="pub-search" placeholder="Search by title, author or venue…" autocomplete="off"
+                        aria-label="Search publications" data-filter="#pubContainer" data-filter-empty="#pubEmpty">
+                    <p id="pubEmpty" class="pub-empty" style="display:none;">No publications match that search.</p>
+
+                    <div id="pubContainer" class="list-wrap">
+
+                        <div class="pub-group">
+                            <h3 class="pub-group-title">Conference Papers <span class="count">(3)</span></h3>
+                            <ul class="pub-list">
+                                <li class="pub-item" id="pub-c1">
+                                    <span class="pub-id">[C1]<span class="pub-tag acl" tabindex="0" data-venue="Findings of the Conference on Empirical Methods in Natural Language Processing (EMNLP 2026)">EMNLP 2026</span></span>
+                                    <div class="pub-body">
+                                        <h3 class="pub-title"><a href="https://aclanthology.org/2026.findings-emnlp.2129.pdf" target="_blank" rel="noopener">Many Dialects, Many Languages, One Cultural Lens: Evaluating Multilingual VLMs for Bengali Culture Understanding Across Historically Linked Languages and Regional Dialects</a></h3>
+                                        <p class="pub-authors">Md. Faiyaz Abdullah Sayeedi*, <span class="me">Nurul Labib Sayeedi</span>*, Shubhashis Roy Dipta, Rubaya Tabassum, Ariful Ekraj Hridoy, Mehraj Mahmood, Mahbub E Sobhani, Md Tarek Hasan, Swakkhar Shatabda</p>
+                                        <p class="pub-venue">Findings of the Conference on Empirical Methods in Natural Language Processing (EMNLP 2026)</p>
+                                        <ul class="pub-links">
+                                            <li><button type="button" class="pub-toggle" aria-expanded="false" aria-controls="abs-c1"><span class="pub-toggle-label">abstract</span></button></li>
+                                            <li><a href="https://aclanthology.org/2026.findings-emnlp.2129.pdf" target="_blank" rel="noopener">paper</a></li>
+                                            <li><a href="https://huggingface.co/datasets/FaiyazAbdullah114708/BanglaVerse" target="_blank" rel="noopener">dataset</a></li>
+                                        </ul>
+                                        <p class="pub-abstract" id="abs-c1" hidden>Bangla culture is richly expressed through region, dialect, history, food, politics, media, and everyday visual life, yet it remains underrepresented in multimodal evaluation. To address this gap, we introduce BanglaVerse, a culturally grounded benchmark for evaluating multilingual vision-language models (VLMs) on Bengali culture across historically linked languages and regional dialects. Built from 1,152 manually curated images across nine domains, the benchmark supports visual question answering and captioning, and is expanded into four languages and five Bangla dialects, yielding ~32.2K artifacts. Our experiments show that evaluating only standard Bangla overestimates true model capability: performance drops under dialectal variation, especially for caption generation, while historically linked languages such as Hindi and Urdu retain some cultural meaning but remain weaker for structured reasoning. Across domains, the main bottleneck is missing cultural knowledge rather than visual grounding alone, with knowledge-intensive categories. These findings position BanglaVerse as a more realistic test bed for measuring culturally grounded multimodal understanding under linguistic variation.</p>
+                                    </div>
+                                </li>
+                                <li class="pub-item" id="pub-c2">
+                                    <span class="pub-id">[C2]<span class="pub-tag acl" tabindex="0" data-venue="Poster Presentation, 15th Joint Conference on Lexical and Computational Semantics (*SEM 2026), co-located with ACL 2026">*SEM 2026</span></span>
+                                    <div class="pub-body">
+                                        <h3 class="pub-title"><a href="https://aclanthology.org/2026.starsem-conference.22/" target="_blank" rel="noopener">Can LLMs Solve My Grandma&rsquo;s Riddle? Evaluating Multilingual Large Language Models on Reasoning Traditional Bangla Tricky Riddles</a></h3>
+                                        <p class="pub-authors"><span class="me">Nurul Labib Sayeedi</span>*, Md. Faiyaz Abdullah Sayeedi*, Khushnur Binte Jahangir, Swakkhar Shatabda, Sarah Masud Preum</p>
+                                        <p class="pub-venue">Poster Presentation, 15th Joint Conference on Lexical and Computational Semantics (*SEM 2026), co-located with ACL 2026</p>
+                                        <ul class="pub-links">
+                                            <li><button type="button" class="pub-toggle" aria-expanded="false" aria-controls="abs-c2"><span class="pub-toggle-label">abstract</span></button></li>
+                                            <li><a href="https://aclanthology.org/2026.starsem-conference.22/" target="_blank" rel="noopener">paper</a></li>
+                                            <li><a href="https://github.com/Labib1610/BanglaRiddleEval" target="_blank" rel="noopener">code</a></li>
+                                        </ul>
+                                        <p class="pub-abstract" id="abs-c2" hidden>Large Language Models (LLMs) show impressive performance on many NLP benchmarks, yet their ability to reason in figurative, culturally grounded, and low-resource settings remains underexplored. We address this gap for Bangla by introducing BanglaRiddleEval, a benchmark of 1,244 traditional Bangla riddles instantiated across four tasks (4,976 riddle-task artifacts in total). Using an LLM-based pipeline, we generate Chain-of-Thought explanations, semantically coherent distractors, and fine-grained ambiguity annotations, and evaluate a diverse suite of open-source and closed-source models under different prompting strategies. Models achieve moderate semantic overlap on generative QA but low correctness, MCQ accuracy peaks at only about 56% versus an 83.3% human baseline, and ambiguity resolution ranges from roughly 26% to 68%, with high-quality explanations confined to the strongest models. These results show that current LLMs capture some cues needed for Bangla riddle reasoning but remain far from human-level performance, establishing BanglaRiddleEval as a challenging new benchmark for low-resource figurative reasoning.</p>
+                                    </div>
+                                </li>
+                                <li class="pub-item" id="pub-c3">
+                                    <span class="pub-id">[C3]<span class="pub-tag acl" tabindex="0" data-venue="Findings of the Conference of the European Chapter of the Association for Computational Linguistics (EACL 2027)">EACL 2027</span></span>
+                                    <div class="pub-body">
+                                        <h3 class="pub-title"><a href="https://arxiv.org/pdf/2609.03410" target="_blank" rel="noopener">To What Extent Do Large Language Models Understand Bangla Idioms?</a></h3>
+                                        <p class="pub-authors">Mousumi Akter, Md Faiyaz Abdullah Sayeedi, <span class="me">Nurul Labib Sayeedi</span>, Swakkhar Shatabda</p>
+                                        <p class="pub-venue">Findings of the Conference of the European Chapter of the Association for Computational Linguistics (EACL 2027)</p>
+                                        <ul class="pub-links">
+                                            <li><button type="button" class="pub-toggle" aria-expanded="false" aria-controls="abs-c3"><span class="pub-toggle-label">abstract</span></button></li>
+                                            <li><a href="https://arxiv.org/pdf/2609.03410" target="_blank" rel="noopener">paper</a></li>
+                                            <li><a href="https://github.com/Mousumi44/Bangla-Idioms" target="_blank" rel="noopener">code</a></li>
+                                        </ul>
+                                        <p class="pub-abstract" id="abs-c3" hidden>Idiomatic expressions are an integral part of natural language, reflecting cultural nuances and posing unique challenges for computational models, particularly in low-resource languages. In this paper, we present the first large-scale benchmark dataset of Bangla idioms, complemented by a synthetic multiple-choice question (MCQ) dataset for idiom meaning identification. We conduct a comprehensive evaluation of recent large language models (LLMs) across three idiom-related tasks: paraphrasing, idiom span detection, and meaning identification, leveraging zero-shot and few-shot prompting strategies. Our results reveal substantial variability in model performance, with no single LLM consistently outperforming others across all tasks. Notably, Phi-4-mini-instruct excels in paraphrasing, Kimi-K2-32b-instruct in span detection, and Gemini-2.5-flash in meaning identification. We believe that our datasets and analyses will provide valuable resources to guide future research in improving LLM comprehension of idiomatic expressions, particularly in Bangla and other low-resource languages.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="pub-group">
+                            <h3 class="pub-group-title">Workshop Papers <span class="count">(1)</span></h3>
+                            <ul class="pub-list">
+                                <li class="pub-item" id="pub-w1">
+                                    <span class="pub-id">[W1]<span class="pub-tag acl" tabindex="0" data-venue="ACL 2026 Workshop on Multilinguality in the Era of Large Language Models (MeLLM @ ACL 2026)">MeLLM 2026</span></span>
+                                    <div class="pub-body">
+                                        <h3 class="pub-title"><a href="https://aclanthology.org/2026.mellm-1.6.pdf" target="_blank" rel="noopener">MULTIHALUDET: Multilingual Hallucination Detection via LLM Hidden State Probing</a></h3>
+                                        <p class="pub-authors">Riasad Alvi, <span class="me">Nurul Labib Sayeedi</span>, Md Faiyaz Abdullah Sayeedi</p>
+                                        <p class="pub-venue">ACL 2026 Workshop on Multilinguality in the Era of Large Language Models (MeLLM @ ACL 2026)</p>
+                                        <ul class="pub-links">
+                                            <li><button type="button" class="pub-toggle" aria-expanded="false" aria-controls="abs-w1"><span class="pub-toggle-label">abstract</span></button></li>
+                                            <li><a href="https://aclanthology.org/2026.mellm-1.6.pdf" target="_blank" rel="noopener">paper</a></li>
+                                            <li><a href="https://github.com/alvi-uiu/MULTIHALUDET" target="_blank" rel="noopener">code</a></li>
+                                        </ul>
+                                        <p class="pub-abstract" id="abs-w1" hidden>Hallucinations in Large Language Models (LLMs) represent a critical barrier to their reliable deployment, a vulnerability heavily exacerbated in non-English and resource-constrained contexts. Existing detection approaches that rely on output confidence heuristics or single-layer internal representations frequently fail to capture deep, complex factual inconsistencies across diverse languages. To address this, we introduce MultiHaluDet, a novel three-stage stacking framework that detects multilingual hallucinations by probing the full hidden state trajectories of frozen LLMs without requiring language-specific fine-tuning. Our method extracts sequential features across multiple layers and processes them via a hybrid architecture using multi-scale attention and self-attention pooling. By generating out-of-fold embeddings that feed into a calibrated classical classifier ensemble, MultiHaluDet captures both fine-grained and coarse-grained patterns of factual inconsistency. Extensive experiments demonstrate that our framework achieves state-of-the-art detection performance, reaching up to 98.55% AUROC on the English HaluEval and TriviaQA benchmarks using Mistral-7B and LLaMA2-7B architectures. Crucially, we rigorously evaluate our framework&rsquo;s cross-lingual generalization across high (French), medium (Bangla), and low-resource (Amharic) languages. MultiHaluDet demonstrates exceptional representational robustness, consistently outperforming baselines and successfully transferring hallucination detection capabilities across typologically diverse linguistic tiers.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="pub-group">
+                            <h3 class="pub-group-title">Preprints <span class="count">(3)</span></h3>
+                            <ul class="pub-list">
+                                <li class="pub-item" id="pub-p1">
+                                    <span class="pub-id">[Pre1]<span class="pub-tag pending" tabindex="0" data-venue="arXiv preprint">arXiv</span></span>
+                                    <div class="pub-body">
+                                        <h3 class="pub-title"><a href="https://arxiv.org/pdf/2610.30103" target="_blank" rel="noopener">Did the Problem Actually Get Harder? Testing LLMs on Paired P and NP-Complete Problems Hardened by Adversarial Multi-Agent Rewriting</a></h3>
+                                        <p class="pub-authors"><span class="me">Nurul Labib Sayeedi</span>, Md Faiyaz Abdullah Sayeedi, Zabir Al Nazi, Mahbub E Sobhani, Shubhashis Roy Dipta</p>
+                                        <p class="pub-venue">arXiv preprint</p>
+                                        <ul class="pub-links">
+                                            <li><button type="button" class="pub-toggle" aria-expanded="false" aria-controls="abs-p1"><span class="pub-toggle-label">abstract</span></button></li>
+                                            <li><a href="https://arxiv.org/pdf/2610.30103" target="_blank" rel="noopener">paper</a></li>
+                                            <li><a href="https://github.com/Labib1610/complexity-benchmark" target="_blank" rel="noopener">code</a></li>
+                                        </ul>
+                                        <p class="pub-abstract" id="abs-p1" hidden>Many NP-complete (NPC) problems have a polynomial-time (P) twin that differs in a single structural detail, such as 3- versus 2-colouring a graph. A model that reasons rather than recalls should notice which side of this boundary a problem falls on, yet existing benchmarks either fix the wording of each task or ignore its complexity class, so they cannot separate the two. We introduce P2NPCBench, a benchmark of 12 problem families in which every NPC problem is paired with a P twin posed over the same surface. To remove the textbook cues that enable recall, we build it with AgentGAN, an adversarial multi-agent framework in which a generator rewrites each statement until a panel of frozen code models fails, while an executable validity gate keeps every rewrite answer- and class-preserving. The result is 2,114 hardened statements with hand-verified reference human solvers. Evaluating 12 proprietary and open-source models, we find that every model scores lower on NPC statements than on their P twins (35.4% vs. 63.8% pass@1), and that 95.1% of model-family pairs fail more often on the NPC side. A tenfold time limit raises NPC accuracy only from 28.5% to 31.9%, so failures stem from wrong or crashing programs rather than slow ones. Hardening also narrows the class gap from 24.8 to 14.6 points, showing that part of the apparent gap reflects familiarity with textbook phrasing rather than complexity class.</p>
+                                    </div>
+                                </li>
+                                <li class="pub-item" id="pub-p2">
+                                    <span class="pub-id">[Pre2]<span class="pub-tag pending" tabindex="0" data-venue="arXiv preprint">arXiv</span></span>
+                                    <div class="pub-body">
+                                        <h3 class="pub-title"><a href="https://github.com/Labib1610/hyperbolic-dim-study" target="_blank" rel="noopener">Mind the Scale: Fair Comparison Reveals When Hyperbolic Geometry Helps Linguistic Hierarchies</a></h3>
+                                        <p class="pub-authors"><span class="me">Nurul Labib Sayeedi</span></p>
+                                        <p class="pub-venue">arXiv preprint</p>
+                                        <ul class="pub-links">
+                                            <li><button type="button" class="pub-toggle" aria-expanded="false" aria-controls="abs-p2"><span class="pub-toggle-label">abstract</span></button></li>
+                                            <li><a href="https://github.com/Labib1610/hyperbolic-dim-study" target="_blank" rel="noopener">code</a></li>
+                                        </ul>
+                                        <p class="pub-abstract" id="abs-p2" hidden>Hyperbolic geometry is often assumed to suit hierarchical language data, because its volume grows exponentially, like the number of nodes in a tree. We test this assumption on subtrees of 100 to 200 nodes from the WordNet noun hierarchy, embedded with an objective that regresses tree distances. Trained to reproduce these distances at a fixed scale, a hyperbolic embedding fails without any error message, and the near-random result makes Euclidean space look better at every dimension we test. Learning a single global scale, which is equivalent to learning the curvature, reverses this result when both geometries are trained with the same stopping rule. Hyperbolic embeddings then reach a given reconstruction quality with about half the dimensions, and the gain is largest at low dimension and on hierarchies that branch widely. The advantage does not carry over to lexical entailment. On HyperLex and WBLESS, embedding distance carries almost no entailment signal in either geometry. What predicts entailment is how well an embedding encodes the generality of a concept, and Euclidean embeddings do this at least as well.</p>
+                                    </div>
+                                </li>
+                                <li class="pub-item" id="pub-p3">
+                                    <span class="pub-id">[Pre3]<span class="pub-tag pending" tabindex="0" data-venue="Preprint, ResearchSquare">ResearchSquare</span></span>
+                                    <div class="pub-body">
+                                        <h3 class="pub-title"><a href="https://assets-eu.researchsquare.com/files/rs-10728064/v1_covered_b5317f4d-b961-422b-b3b8-f9b89d9eb685.pdf?c=1793639168" target="_blank" rel="noopener">A Bangla-language retrieval-augmented conversational agent for maternal health in a low-resource setting: design and formative evaluation</a></h3>
+                                        <p class="pub-authors">Fahim Muntasir, <span class="me">Nurul Labib Sayeedi</span>, Jannatun Noor</p>
+                                        <p class="pub-venue">Preprint, ResearchSquare</p>
+                                        <ul class="pub-links">
+                                            <li><button type="button" class="pub-toggle" aria-expanded="false" aria-controls="abs-p3"><span class="pub-toggle-label">abstract</span></button></li>
+                                            <li><a href="https://assets-eu.researchsquare.com/files/rs-10728064/v1_covered_b5317f4d-b961-422b-b3b8-f9b89d9eb685.pdf?c=1793639168" target="_blank" rel="noopener">paper</a></li>
+                                        </ul>
+                                        <p class="pub-abstract" id="abs-p3" hidden>Maternal health information in Bangladesh is difficult to access for women with limited literacy and no English, and perinatal mental health remains under-supported. We designed and formatively evaluated Baby and Me, a Bangla-language conversational agent that retrieves from a curated, physician-reviewed corpus of 247 maternal health articles, segmented into 2,945 indexed passages, and generates responses grounded in the retrieved material. A survey of 72 pregnant and postpartum women established design requirements; Bangla-only language preference was universal among women with no formal or primary education, and a quarter of households reported annual income below one lakh Bangladeshi taka. Candidate model configurations were screened against physician-authored reference answers before deployment. Twenty-four respondents then rated the deployed system: ease of use was highest (mean 4.79 of 5) and clarity strong (4.54), while trust (4.29), concern alignment (4.04) and empathy (4.00) were lower and more dispersed. Interviews indicated that the interface showed users that retrieval had occurred but not whether guidance came from a clinically reviewed source, suggesting that process transparency and source attribution are not interchangeable. As a formative study with a modest sample, a single site and no controlled comparison, this work establishes feasibility rather than effectiveness.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Contact -->
+            <div class="row">
+                <div class="col-md-12 section" id="contact">
+                    <h2 class="section-title">Contact</h2>
+                    <p class="section-note">Happy to talk about research, collaborations, or anything in the papers above.
+                        Email is the fastest way to reach me.</p>
+
+                    <div class="contact-block">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="contact-panel">
+                                    <h3>Contact details</h3>
+                                    <ul class="contact-details">
+                                        <li>
+                                            <span class="ci ion-ios-email"></span>
+                                            <span>
+                                                <span class="cd-label">Email</span>
+                                                <span class="cd-value"><a href="mailto:nsayeedi2410045@bsds.uiu.ac.bd">nsayeedi2410045@bsds.uiu.ac.bd</a></span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="ci ion-ios-email-outline"></span>
+                                            <span>
+                                                <span class="cd-label">Secondary email</span>
+                                                <span class="cd-value"><a href="mailto:nlabibs2003@gmail.com">nlabibs2003@gmail.com</a></span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="ci ion-ios-location"></span>
+                                            <span>
+                                                <span class="cd-label">Location</span>
+                                                <span class="cd-value">Dhaka, Bangladesh</span>
+                                            </span>
+                                        </li>
+                                    </ul>
+
+                                    <h3>Find me online</h3>
+                                    <ul class="profile-links">
+                                        <li><a href="https://scholar.google.com/citations?user=cv1GHaUAAAAJ&hl=en" target="_blank"
+                                                rel="noopener">Google Scholar</a></li>
+                                        <li><a href="https://github.com/Labib1610" target="_blank" rel="noopener">GitHub</a>
+                                        </li>
+                                        <li><a href="https://www.linkedin.com/in/nurul-labib-sayeedi/" target="_blank"
+                                                rel="noopener">LinkedIn</a></li>
+                                        <li><a href="https://orcid.org/0009-0002-4116-3917" target="_blank"
+                                                rel="noopener">ORCID</a></li>
+                                        <li><a href="https://www.researchgate.net/profile/Nurul-Sayeedi?ev=hdr_xprf" target="_blank"
+                                                rel="noopener">ResearchGate</a></li>
+                                        <li><a href="https://www.facebook.com/nurul.labib.sayeedi" target="_blank"
+                                                rel="noopener">Facebook</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    <footer id="site-footer">
+        <div class="container">
+            <p class="copyright">&copy; 2026 Nurul Labib Sayeedi. Powered by <a
+                href="https://github.com/UIU-Developers-Hub">@UIU Developers Hub</a>. Hosted by GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <button type="button" id="back-to-top" aria-label="Back to top"><span class="ion-chevron-up"></span></button>
+
+    <!-- mobile menu -->
+    <div class="overlay" id="site-menu">
+        <button type="button" class="overlay-close" aria-label="Close menu"><span class="ion-ios-close-empty"></span></button>
+        <nav aria-label="Mobile">
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><span class="current">Publications</span></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="honor_achievement.html">Awards</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

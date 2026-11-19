@@ -1,6 +1,6 @@
-# Nurul Labib Sayeedi — Personal Website
+# Nurul Labib Sayeedi — Academic Portfolio
 
-Personal website and academic portfolio of **Nurul Labib Sayeedi**, a 3rd-year B.Sc. Data Science student at United International University (UIU), Dhaka.
+Personal academic portfolio of **Nurul Labib Sayeedi**, 3rd-year B.Sc. Data Science student at United International University (UIU), Dhaka.
 
 Live at: **[labib1610.github.io](https://labib1610.github.io)**
 
@@ -11,47 +11,29 @@ Live at: **[labib1610.github.io](https://labib1610.github.io)**
 ```
 Labib1610.github.io/
 │
-├── index.html              # Landing page (projects, research, notes, contact)
-├── style.css               # Styles for the landing page
-├── script.js               # JS for the landing page
+├── index.html                  # About me
+├── publications.html           # 7 research papers
+├── projects.html               # Dev projects
+├── honor_achievement.html      # Awards & scholarships
+│
+├── blog/
+│   ├── index.html
+│   ├── kalman-filter.html
+│   ├── decision-models-from-scratch.html
+│   ├── Kalman_Filter_Notes.pdf
+│   └── Decision_Models_from_Scratch.pdf
 │
 ├── assets/
-│   ├── profile.jpeg        # Profile photo
-│   └── Labib_CV.pdf        # CV (place here — linked from academic portfolio)
+│   ├── profile.jpeg            # Profile photo
+│   └── Labib_CV.pdf            # Place your CV here
 │
-├── portfolio-website/      # Academic portfolio (About, Publications, etc.)
-│   ├── index.html          # About me
-│   ├── publications.html   # 7 research papers (3 conference, 1 workshop, 3 preprints)
-│   ├── projects.html       # Dev projects
-│   ├── honor_achievement.html  # Scholarships
-│   ├── blog/               # Blog posts + PDF notes
-│   │   ├── index.html
-│   │   ├── kalman-filter.html
-│   │   ├── decision-models-from-scratch.html
-│   │   ├── Kalman_Filter_Notes.pdf
-│   │   └── Decision_Models_from_Scratch.pdf
-│   ├── css/                # Bootstrap, Ionicons, custom CSS
-│   ├── js/                 # jQuery, Bootstrap, pace, site script
-│   ├── fonts/              # Ionicons web font files
-│   └── img/
-│       ├── icon.png        # Site favicon / logo
-│       └── labib.jpeg      # Profile photo (copy of assets/profile.jpeg)
-│
-└── ADDING_CONTENT.md       # Guide for adding new papers and projects
+├── css/                        # Bootstrap, Ionicons, custom styles
+├── js/                         # jQuery, Bootstrap, pace, site script
+├── fonts/                      # Ionicons web fonts
+└── img/
+    ├── icon.png
+    └── labib.jpeg
 ```
-
----
-
-## Pages
-
-| URL | Description |
-|-----|-------------|
-| `labib1610.github.io` | Landing page — projects, research highlights, notes |
-| `labib1610.github.io/portfolio-website/` | Academic portfolio — About |
-| `labib1610.github.io/portfolio-website/publications.html` | 7 research papers |
-| `labib1610.github.io/portfolio-website/projects.html` | Dev projects |
-| `labib1610.github.io/portfolio-website/blog/` | Blog & PDF notes |
-| `labib1610.github.io/portfolio-website/honor_achievement.html` | Awards & scholarships |
 
 ---
 
@@ -72,11 +54,7 @@ Labib1610.github.io/
 
 ---
 
-## Updating the Site
-
-- **Add a new paper or project:** follow the step-by-step guide in [`ADDING_CONTENT.md`](ADDING_CONTENT.md)
-- **CV:** place your PDF at `assets/Labib_CV.pdf` — the academic portfolio already links to it
-- **Profile photo:** replace `assets/profile.jpeg` and `portfolio-website/img/labib.jpeg`
+## Updating
 
 To push changes:
 ```bash
@@ -85,8 +63,10 @@ git commit -m "Update: describe your changes"
 git push
 ```
 
-GitHub Pages will redeploy automatically within a few minutes.
+**CV:** place your PDF at `assets/Labib_CV.pdf` — already linked from the About page.
+
+GitHub Pages settings: Source → `main` branch, `/ (root)` folder.
 
 ---
 
-Built with HTML, CSS, and JavaScript. Academic portfolio design by [@UIU Developers Hub](https://github.com/UIU-Developers-Hub).
+Design by [@UIU Developers Hub](https://github.com/UIU-Developers-Hub). Hosted by GitHub Pages.
