@@ -32,6 +32,7 @@
                     <li><span class="current">Projects</span></li>
                     <li><a href="blog/index.html">Blog</a></li>
                     <li><a href="honor_achievement.html">Awards</a></li>
+                    <li><a href="assets/Labib_CV.pdf" target="_blank" rel="noopener">CV</a></li>
                 </ul>
             </nav>
             <button type="button" id="trigger-overlay" class="menu-toggle" aria-label="Open menu"
@@ -44,55 +45,47 @@
     <div class="content-body">
         <div class="container">
             <h2 class="section-title">Projects</h2>
-            <p class="section-note">Engineering and development projects, with source code and demos. Research projects are listed on the <a href="publications.html">Publications</a> page.</p>
+            <p class="section-note">Browser games and development projects. Research projects are listed on the <a href="publications.html">Publications</a> page. Notes and learning resources are on the <a href="blog/index.html">Blog</a> page.</p>
 
             <div class="row">
                 <main class="col-md-12">
-                    <input type="text" id="searchInput" class="pub-search" placeholder="Search by name, topic or technology…" autocomplete="off"
-                        aria-label="Search projects" data-filter="#projectContainer" data-filter-empty="#projEmpty">
-                    <p id="projEmpty" class="pub-empty" style="display:none;">No projects match that search.</p>
-
-                    <div id="projectContainer" class="list-wrap">
+                    <div class="list-wrap">
                         <ul class="pub-list">
+
                             <li class="pub-item">
-                                <span class="pub-id">[P1]</span>
+                                <span class="pub-id">
+                                    <span class="pub-tag" tabindex="0" style="background:var(--accent-tint);color:var(--accent);border-color:var(--accent-line)">Game</span>
+                                </span>
                                 <div class="pub-body">
-                                    <h3 class="pub-title"><a href="https://labib1610.github.io/neon-gravity-runner" target="_blank" rel="noopener">Neon Gravity Runner</a></h3>
-                                    <p class="pub-subtitle">A browser-based endless runner game with gravity mechanics</p>
-                                    <p class="pub-abstract">An endless side-scrolling runner built entirely in the browser. The player flips gravity to dodge obstacles in a neon-lit environment. Fully playable in-browser with no dependencies.</p>
-                                    <p class="pub-venue">JavaScript &middot; HTML &middot; CSS</p>
+                                    <h3 class="pub-title">
+                                        <a href="https://labib1610.github.io/neon-gravity-runner" target="_blank" rel="noopener">Neon Gravity Runner</a>
+                                    </h3>
+                                    <p class="pub-venue">JavaScript &middot; HTML &middot; CSS &nbsp;&mdash;&nbsp; <em>Completed</em></p>
+                                    <p class="pub-abstract" style="display:block">An endless side-scrolling runner built entirely in the browser. The player flips gravity to dodge obstacles in a neon-lit environment — no downloads, no dependencies, fully playable in-browser.</p>
                                     <ul class="pub-links">
+                                        <li><a href="https://labib1610.github.io/neon-gravity-runner" target="_blank" rel="noopener">&#9654; play live</a></li>
                                         <li><a href="https://github.com/Labib1610/neon-gravity-runner" target="_blank" rel="noopener">code</a></li>
-                                        <li><a href="https://labib1610.github.io/neon-gravity-runner" target="_blank" rel="noopener">live demo</a></li>
                                     </ul>
                                 </div>
                             </li>
+
                             <li class="pub-item">
-                                <span class="pub-id">[P2]</span>
+                                <span class="pub-id">
+                                    <span class="pub-tag" tabindex="0" style="background:var(--accent-tint);color:var(--accent);border-color:var(--accent-line)">Game</span>
+                                </span>
                                 <div class="pub-body">
-                                    <h3 class="pub-title"><a href="https://labib1610.github.io/mr-white-game/" target="_blank" rel="noopener">Mr White Game</a></h3>
-                                    <p class="pub-subtitle">A browser-based interactive game</p>
-                                    <p class="pub-abstract">An interactive browser game combining JavaScript, HTML, and CSS for the frontend with Python for backend logic. Playable directly in the browser.</p>
-                                    <p class="pub-venue">JavaScript &middot; HTML &middot; CSS &middot; Python</p>
+                                    <h3 class="pub-title">
+                                        <a href="https://labib1610.github.io/mr-white-game/" target="_blank" rel="noopener">Mr White Game</a>
+                                    </h3>
+                                    <p class="pub-venue">JavaScript &middot; HTML &middot; CSS &middot; Python &nbsp;&mdash;&nbsp; <em>Completed</em></p>
+                                    <p class="pub-abstract" style="display:block">An interactive browser game with a JavaScript/HTML/CSS frontend and Python backend logic. Playable directly in the browser.</p>
                                     <ul class="pub-links">
+                                        <li><a href="https://labib1610.github.io/mr-white-game/" target="_blank" rel="noopener">&#9654; play live</a></li>
                                         <li><a href="https://github.com/Labib1610/mr-white-game" target="_blank" rel="noopener">code</a></li>
-                                        <li><a href="https://labib1610.github.io/mr-white-game/" target="_blank" rel="noopener">live demo</a></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li class="pub-item">
-                                <span class="pub-id">[P3]</span>
-                                <div class="pub-body">
-                                    <h3 class="pub-title"><a href="https://github.com/Labib1610/LLM-from-Scratch-Vizuara-" target="_blank" rel="noopener">LLM from Scratch</a></h3>
-                                    <p class="pub-subtitle">Implementation notes for building large language models from scratch</p>
-                                    <p class="pub-abstract">Notes and code implementations following the Vizuara series on building large language models from first principles. Covers tokenization, attention mechanisms, and transformer training.</p>
-                                    <p class="pub-venue">Python &middot; PyTorch &middot; Deep Learning</p>
-                                    <ul class="pub-links">
-                                        <li><a href="https://github.com/Labib1610/LLM-from-Scratch-Vizuara-" target="_blank" rel="noopener">code</a></li>
-                                        <li><a href="https://drive.google.com/drive/folders/1-ZIqiyHeQjiBj1-n6w8R6gfCkWeBQ7PN?usp=sharing" target="_blank" rel="noopener">notes</a></li>
-                                    </ul>
-                                </div>
-                            </li>
+
                         </ul>
                     </div>
                 </main>
@@ -136,21 +129,6 @@
                                         </li>
                                     </ul>
 
-                                    <h3>Find me online</h3>
-                                    <ul class="profile-links">
-                                        <li><a href="https://scholar.google.com/citations?user=cv1GHaUAAAAJ&hl=en" target="_blank"
-                                                rel="noopener">Google Scholar</a></li>
-                                        <li><a href="https://github.com/Labib1610" target="_blank" rel="noopener">GitHub</a>
-                                        </li>
-                                        <li><a href="https://www.linkedin.com/in/nurul-labib-sayeedi/" target="_blank"
-                                                rel="noopener">LinkedIn</a></li>
-                                        <li><a href="https://orcid.org/0009-0002-4116-3917" target="_blank"
-                                                rel="noopener">ORCID</a></li>
-                                        <li><a href="https://www.researchgate.net/profile/Nurul-Sayeedi?ev=hdr_xprf" target="_blank"
-                                                rel="noopener">ResearchGate</a></li>
-                                        <li><a href="https://www.facebook.com/nurul.labib.sayeedi" target="_blank"
-                                                rel="noopener">Facebook</a></li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>

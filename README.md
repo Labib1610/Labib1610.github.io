@@ -17,11 +17,7 @@ Labib1610.github.io/
 ├── honor_achievement.html      # Awards & scholarships
 │
 ├── blog/
-│   ├── index.html
-│   ├── kalman-filter.html
-│   ├── decision-models-from-scratch.html
-│   ├── Kalman_Filter_Notes.pdf
-│   └── Decision_Models_from_Scratch.pdf
+│   └── index.html
 │
 ├── assets/
 │   ├── profile.jpeg            # Profile photo
@@ -43,13 +39,13 @@ Labib1610.github.io/
 - BanglaVerse — EMNLP Findings 2026
 - BanglaRiddleEval — *SEM 2026
 - Bangla Idioms — EACL Findings 2027
+- Mind the Scale — EACL Findings 2027
 
 **Workshop Paper**
 - MULTIHALUDET — MeLLM @ ACL 2026
 
 **Preprints**
 - P2NPCBench (arXiv)
-- Mind the Scale (arXiv)
 - Baby and Me (ResearchSquare)
 
 ---

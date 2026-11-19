@@ -15,6 +15,17 @@
 	<link rel="stylesheet" href="css/pace.css">
 	<link rel="stylesheet" href="css/custom.css">
 
+	<style>
+	.plb { display:flex; flex-wrap:wrap; gap:8px 10px; margin:28px 0 0; padding:22px 0 0; border-top:1px solid #e5e8ef; align-items:center; }
+	.plb a { display:inline-flex; align-items:center; gap:5px; padding:5px 12px; border:1px solid #dde0e8; border-radius:20px; font-size:.82rem; color:var(--ink-light); text-decoration:none; transition:border-color .15s,color .15s,background .15s; }
+	.plb a:hover { border-color:var(--accent); color:var(--accent); background:var(--accent-tint); text-decoration:none; }
+	.plb .plb-cv { background:var(--accent-tint); color:var(--accent); border-color:var(--accent-line); font-weight:500; }
+	.plb .plb-cv:hover { background:var(--accent); color:#fff; }
+	.plb-sep { display:block; width:1px; height:18px; background:#dde0e8; flex-shrink:0; margin:0 4px; }
+	.plb .plb-icon { font-size:14px; line-height:1; }
+	@media (max-width:767px) { .plb-sep { display:none; } }
+	</style>
+
 	<!-- js -->
 	<script src="js/pace.min.js"></script>
 </head>
@@ -35,6 +46,7 @@
 					<li><a href="projects.html">Projects</a></li>
 					<li><a href="blog/index.html">Blog</a></li>
 					<li><a href="honor_achievement.html">Awards</a></li>
+					<li><a href="assets/Labib_CV.pdf" target="_blank" rel="noopener">CV</a></li>
 				</ul>
 			</nav>
 			<button type="button" id="trigger-overlay" class="menu-toggle" aria-label="Open menu"
@@ -52,45 +64,14 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="profile">
+
+						<!-- hero: photo + bio -->
 						<div class="profile-grid">
-							<!-- identity: photo and profile links -->
 							<div class="profile-side">
 								<div class="profile-photo-wrap">
 									<img class="profile-photo" src="img/labib.jpeg" alt="Nurul Labib Sayeedi">
 								</div>
-								<div class="profile-link-groups">
-									<div class="link-group">
-										<span class="link-group-label">Academic profiles</span>
-										<ul class="icon-links">
-											<li><a href="https://scholar.google.com/citations?user=cv1GHaUAAAAJ&hl=en" target="_blank" rel="noopener"><span class="icon ion-university" aria-hidden="true"></span>Google Scholar</a></li>
-											<li><a href="https://aclanthology.org/people/nurul-labib-sayeedi/" target="_blank" rel="noopener"><span class="icon ion-document-text" aria-hidden="true"></span>ACL Anthology</a></li>
-											<li><a href="https://dblp.org/pid/425/1779.html" target="_blank" rel="noopener"><span class="icon ion-ios-list-outline" aria-hidden="true"></span>DBLP</a></li>
-											<li><a href="https://www.semanticscholar.org/author/Nurul-Labib-Sayeedi/2400417205" target="_blank" rel="noopener"><span class="icon ion-ios-search" aria-hidden="true"></span>Semantic Scholar</a></li>
-											<li><a href="https://openreview.net/profile?id=%7ENurul_Labib_Sayeedi1" target="_blank" rel="noopener"><span class="icon ion-ios-chatbubble-outline" aria-hidden="true"></span>OpenReview</a></li>
-											<li><a href="https://orcid.org/0009-0002-4116-3917" target="_blank" rel="noopener"><span class="icon ion-ios-person-outline" aria-hidden="true"></span>ORCID</a></li>
-											<li><a href="https://www.researchgate.net/profile/Nurul-Sayeedi?ev=hdr_xprf" target="_blank" rel="noopener"><span class="icon ion-ios-people-outline" aria-hidden="true"></span>ResearchGate</a></li>
-										</ul>
-									</div>
-									<div class="link-group">
-										<span class="link-group-label">Social</span>
-										<ul class="icon-links">
-											<li><a href="mailto:nsayeedi2410045@bsds.uiu.ac.bd"><span class="icon ion-ios-email-outline" aria-hidden="true"></span>Email</a></li>
-											<li><a href="https://github.com/Labib1610" target="_blank" rel="noopener"><span class="icon ion-social-github" aria-hidden="true"></span>GitHub</a></li>
-											<li><a href="https://www.linkedin.com/in/nurul-labib-sayeedi/" target="_blank" rel="noopener"><span class="icon ion-social-linkedin" aria-hidden="true"></span>LinkedIn</a></li>
-											<li><a href="https://x.com/LabibSayeedi" target="_blank" rel="noopener"><span class="icon icon-x" aria-hidden="true">𝕏</span>X</a></li>
-											<li><a href="https://www.facebook.com/nurul.labib.sayeedi" target="_blank" rel="noopener"><span class="icon ion-social-facebook" aria-hidden="true"></span>Facebook</a></li>
-										</ul>
-									</div>
-									<div class="link-group">
-										<span class="link-group-label">CV</span>
-										<ul class="icon-links">
-											<li><a href="assets/Labib_CV.pdf" target="_blank" rel="noopener"><span class="icon ion-document" aria-hidden="true"></span>Download CV (PDF)</a></li>
-										</ul>
-									</div>
-								</div>
 							</div>
-
-							<!-- about: role and bio -->
 							<div class="profile-main">
 								<p class="profile-affiliation">
 									3rd Year Undergraduate, UIU &nbsp;&middot; Dhaka, Bangladesh
@@ -100,45 +81,27 @@
 									<p>My research focuses on Natural Language Processing, with particular interest in low-resource language evaluation, multilingual benchmarking, and multimodal machine learning. My work has been published at <strong>EMNLP</strong> (Findings 2026), <strong>*SEM 2026</strong> (co-located with ACL), <strong>EACL 2027</strong> (Findings), and the <strong>ACL 2026 Workshop on Multilinguality in the Era of LLMs (MeLLM)</strong>.</p>
 									<p>I am currently serving as an <span class="hl">Undergraduate Teaching Assistant (UTA)</span> at UIU, assisting with courses in Database Management Systems and Data Structures &amp; Algorithms.</p>
 								</div>
-
-								<!-- bio-aside: sports/hobbies — not applicable -->
-								<!--
-								<div class="bio-aside">
-									<p class="aside-text">
-										⚽ When I am not immersed in code, datasets, or late-night paper submissions, I am likely cheering for my favorite football club. As a die-hard fan of <strong>Real Madrid</strong>, I follow every match with the same passion I bring to my research &mdash; <em>Hala Madrid, siempre!</em>
-										<img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg"
-											alt="Real Madrid" style="width: 20px; height: auto; margin: 0 2px -4px 2px;">
-										When it is not football, it is a UFC fight night, a tennis five-setter, or a Formula 1 race weekend.
-									</p>
-									<ul class="hobby-chips">
-										<li><span class="hobby-emoji">⚽</span>Football</li>
-										<li><span class="hobby-emoji">🥋</span>MMA UFC</li>
-										<li><span class="hobby-emoji">🎾</span>Tennis</li>
-										<li><span class="hobby-emoji">🏎️</span>Formula 1</li>
-									</ul>
-								</div>
-								-->
-
-								<!-- PhD callout — not applicable; currently a 3rd year undergraduate -->
-								<!--
-								<aside class="phd-callout">
-									<span class="phd-icon ion-university" aria-hidden="true"></span>
-									<div class="phd-body">
-										<span class="phd-label">Open to PhD positions</span>
-										<h3 class="phd-title">Seeking a fully funded PhD position</h3>
-										<p class="phd-text">
-											I am applying for PhD admission in <strong>Natural Language Processing</strong>,
-											<strong>Multilingualism</strong>, and <strong>Multimodal Learning</strong>.
-										</p>
-										<span class="phd-actions">
-											<a href="mailto:nsayeedi2410045@bsds.uiu.ac.bd">Get in touch</a>
-										</span>
-									</div>
-								</aside>
-								-->
 							</div>
 						</div>
 
+						<!-- Find me online -->
+						<nav class="plb" aria-label="Online profiles">
+							<a href="https://scholar.google.com/citations?user=cv1GHaUAAAAJ&hl=en" target="_blank" rel="noopener"><span class="plb-icon ion-university" aria-hidden="true"></span>Google Scholar</a>
+							<a href="https://aclanthology.org/people/nurul-labib-sayeedi/" target="_blank" rel="noopener"><span class="plb-icon ion-document-text" aria-hidden="true"></span>ACL Anthology</a>
+							<a href="https://dblp.org/pid/425/1779.html" target="_blank" rel="noopener"><span class="plb-icon ion-ios-list-outline" aria-hidden="true"></span>DBLP</a>
+							<a href="https://www.semanticscholar.org/author/Nurul-Labib-Sayeedi/2400417205" target="_blank" rel="noopener"><span class="plb-icon ion-ios-search" aria-hidden="true"></span>Semantic Scholar</a>
+							<a href="https://openreview.net/profile?id=%7ENurul_Labib_Sayeedi1" target="_blank" rel="noopener"><span class="plb-icon ion-ios-chatbubble-outline" aria-hidden="true"></span>OpenReview</a>
+							<a href="https://orcid.org/0009-0002-4116-3917" target="_blank" rel="noopener"><span class="plb-icon ion-ios-person-outline" aria-hidden="true"></span>ORCID</a>
+							<a href="https://www.researchgate.net/profile/Nurul-Sayeedi?ev=hdr_xprf" target="_blank" rel="noopener"><span class="plb-icon ion-ios-people-outline" aria-hidden="true"></span>ResearchGate</a>
+							<span class="plb-sep" aria-hidden="true"></span>
+							<a href="mailto:nsayeedi2410045@bsds.uiu.ac.bd"><span class="plb-icon ion-ios-email-outline" aria-hidden="true"></span>Email</a>
+							<a href="https://github.com/Labib1610" target="_blank" rel="noopener"><span class="plb-icon ion-social-github" aria-hidden="true"></span>GitHub</a>
+							<a href="https://www.linkedin.com/in/nurul-labib-sayeedi/" target="_blank" rel="noopener"><span class="plb-icon ion-social-linkedin" aria-hidden="true"></span>LinkedIn</a>
+							<a href="https://x.com/LabibSayeedi" target="_blank" rel="noopener"><span class="plb-icon" aria-hidden="true" style="font-style:normal;font-size:12px">𝕏</span>X</a>
+							<a href="https://www.facebook.com/nurul.labib.sayeedi" target="_blank" rel="noopener"><span class="plb-icon ion-social-facebook" aria-hidden="true"></span>Facebook</a>
+						</nav>
+
+						<!-- quick facts -->
 						<ul class="fact-grid">
 							<li class="fact fact-wide">
 								<span class="fact-icon ion-ios-analytics" aria-hidden="true"></span>
@@ -161,12 +124,12 @@
 								<span class="fact-body">
 									<span class="fact-label">Published at</span>
 									<span class="fact-value venue-row">
-										<span class="venue">EMNLP</span><span class="venue">*SEM</span><span class="venue">EACL</span><span class="venue">ACL Workshop</span>
+										<span class="venue">EMNLP</span><span class="venue">*SEM</span><span class="venue">EACL &times;2</span><span class="venue">ACL Workshop</span>
 									</span>
 									<span class="fact-meta">Full list on <a href="publications.html">Publications</a> and <a href="https://scholar.google.com/citations?user=cv1GHaUAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</span>
 								</span>
 							</li>
-							<li class="fact">
+							<li class="fact fact-wide">
 								<span class="fact-icon ion-ios-briefcase" aria-hidden="true"></span>
 								<span class="fact-body">
 									<span class="fact-label">Currently</span>
@@ -178,8 +141,8 @@
 
 						<ul class="metrics">
 							<li><span class="num">7</span><span class="label">Research papers</span></li>
-							<li><span class="num">4</span><span class="label">Peer-reviewed</span></li>
-							<li><span class="num">3</span><span class="label">Preprints</span></li>
+							<li><span class="num">5</span><span class="label">Peer-reviewed</span></li>
+							<li><span class="num">2</span><span class="label">Preprints</span></li>
 							<li><span class="num">3</span><span class="label">Semesters as UTA</span></li>
 						</ul>
 					</div>
@@ -196,6 +159,11 @@
 					<div class="feed-fill">
 					<div class="news-feed">
 						<ul class="news-list">
+							<li>
+								<span class="news-emoji">📄</span>
+								<span class="news-body"><span class="news-date">Nov 2026</span><span
+										class="news-text">Paper accepted to the Findings of <strong>EACL 2027</strong>: <em>Mind the Scale: Fair Comparison Reveals When Hyperbolic Geometry Helps Linguistic Hierarchies</em></span></span>
+							</li>
 							<li>
 								<span class="news-emoji">📄</span>
 								<span class="news-body"><span class="news-date">Nov 2026</span><span
@@ -246,16 +214,54 @@
 							<h4>Multilingualism</h4>
 							<p>Low-resource and dialectal languages, cross-lingual transfer, culturally grounded evaluation, and performance gaps LLMs carry across language families and dialects.</p>
 						</li>
-						<!-- Knowledge Representation — not in current research focus -->
-						<!--
-						<li>
-							<h4>Knowledge Representation</h4>
-							<p>Hyperbolic embeddings, hierarchical structures, and geometric models for language data.</p>
-						</li>
-						-->
 						<li>
 							<h4>Multimodal Learning</h4>
 							<p>Vision&ndash;language models, culturally grounded multimodal benchmarks, and evaluation of VLMs across historically linked languages and regional dialects.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Selected Publications -->
+			<div class="row section">
+				<div class="col-md-12" id="selected-pubs">
+					<h2 class="section-title">
+						Selected Publications
+						<a class="section-more" href="publications.html">all 7 papers &rarr;</a>
+					</h2>
+					<ul class="pub-list">
+						<li class="pub-item">
+							<span class="pub-id"><span class="pub-tag acl" tabindex="0">EMNLP 2026</span></span>
+							<div class="pub-body">
+								<h3 class="pub-title"><a href="https://aclanthology.org/2026.findings-emnlp.2129.pdf" target="_blank" rel="noopener">Many Dialects, Many Languages, One Cultural Lens: Evaluating Multilingual VLMs for Bengali Culture Understanding</a></h3>
+								<p class="pub-authors"><span class="me">Nurul Labib Sayeedi</span>*, Md. Faiyaz Abdullah Sayeedi*, et al.</p>
+								<ul class="pub-links">
+									<li><a href="https://aclanthology.org/2026.findings-emnlp.2129.pdf" target="_blank" rel="noopener">paper</a></li>
+									<li><a href="publications.html#pub-c1">details</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="pub-item">
+							<span class="pub-id"><span class="pub-tag acl" tabindex="0">EACL 2027</span></span>
+							<div class="pub-body">
+								<h3 class="pub-title"><a href="papers/Hyperbolic_Computational_EACL.pdf" target="_blank" rel="noopener">Mind the Scale: Fair Comparison Reveals When Hyperbolic Geometry Helps Linguistic Hierarchies</a></h3>
+								<p class="pub-authors"><span class="me">Nurul Labib Sayeedi</span></p>
+								<ul class="pub-links">
+									<li><a href="papers/Hyperbolic_Computational_EACL.pdf" target="_blank" rel="noopener">pdf</a></li>
+									<li><a href="publications.html#pub-c4">details</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="pub-item">
+							<span class="pub-id"><span class="pub-tag acl" tabindex="0">*SEM 2026</span></span>
+							<div class="pub-body">
+								<h3 class="pub-title"><a href="https://aclanthology.org/2026.starsem-conference.22/" target="_blank" rel="noopener">Can LLMs Solve My Grandma&rsquo;s Riddle? Evaluating Multilingual LLMs on Reasoning Traditional Bangla Tricky Riddles</a></h3>
+								<p class="pub-authors"><span class="me">Nurul Labib Sayeedi</span>*, Md. Faiyaz Abdullah Sayeedi*, et al.</p>
+								<ul class="pub-links">
+									<li><a href="https://aclanthology.org/2026.starsem-conference.22/" target="_blank" rel="noopener">paper</a></li>
+									<li><a href="publications.html#pub-c2">details</a></li>
+								</ul>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -278,35 +284,26 @@
 				</div>
 			</div>
 
-			<!-- Academic Service — commented out; no reviewing/mentoring service yet -->
-			<!--
+			<!-- Skills & Tools -->
 			<div class="row section">
-				<div class="col-md-12" id="service">
-					<h2 class="section-title">Academic Service</h2>
-					<p class="section-note">Reviewing, mentoring and teaching contributions.</p>
+				<div class="col-md-12" id="skills">
+					<h2 class="section-title">Skills &amp; Tools</h2>
 					<ul class="interest-grid">
 						<li>
-							<h4>Conferences &amp; Workshops</h4>
-							<p>...</p>
+							<h4>Languages &amp; Frameworks</h4>
+							<p>Python &middot; PyTorch &middot; HuggingFace Transformers &middot; scikit-learn &middot; NumPy &middot; Pandas &middot; SQL</p>
 						</li>
 						<li>
-							<h4>Mentoring &amp; Teaching</h4>
-							<p>...</p>
+							<h4>NLP &amp; LLM Tooling</h4>
+							<p>vLLM &middot; LangChain &middot; OpenAI API &middot; Gemini API &middot; Ollama &middot; NLTK &middot; spaCy &middot; Weights &amp; Biases</p>
+						</li>
+						<li>
+							<h4>Dev &amp; Workflow</h4>
+							<p>Git &middot; GitHub &middot; Linux &middot; Jupyter &middot; Google Colab &middot; LaTeX &middot; HTML &middot; CSS &middot; JavaScript</p>
 						</li>
 					</ul>
 				</div>
 			</div>
-			-->
-
-			<!-- Research Mentorship — commented out; no formal mentorship program -->
-			<!--
-			<div class="row">
-				<div class="col-md-12 section" id="mentorship">
-					<h2 class="section-title">Research Mentorship</h2>
-					<p class="section-note">...</p>
-				</div>
-			</div>
-			-->
 
 			<!-- Contact -->
 			<div class="row">
@@ -344,21 +341,6 @@
 										</li>
 									</ul>
 
-									<h3>Find me online</h3>
-									<ul class="profile-links">
-										<li><a href="https://scholar.google.com/citations?user=cv1GHaUAAAAJ&hl=en" target="_blank"
-												rel="noopener">Google Scholar</a></li>
-										<li><a href="https://github.com/Labib1610" target="_blank" rel="noopener">GitHub</a>
-										</li>
-										<li><a href="https://www.linkedin.com/in/nurul-labib-sayeedi/" target="_blank"
-												rel="noopener">LinkedIn</a></li>
-										<li><a href="https://orcid.org/0009-0002-4116-3917" target="_blank"
-												rel="noopener">ORCID</a></li>
-										<li><a href="https://www.researchgate.net/profile/Nurul-Sayeedi?ev=hdr_xprf" target="_blank"
-												rel="noopener">ResearchGate</a></li>
-										<li><a href="https://www.facebook.com/nurul.labib.sayeedi" target="_blank"
-												rel="noopener">Facebook</a></li>
-									</ul>
 								</div>
 							</div>
 						</div>
@@ -389,6 +371,7 @@
 				<li><a href="projects.html">Projects</a></li>
 				<li><a href="blog/index.html">Blog</a></li>
 				<li><a href="honor_achievement.html">Awards</a></li>
+				<li><a href="assets/Labib_CV.pdf" target="_blank" rel="noopener">CV</a></li>
 			</ul>
 		</nav>
 	</div>
